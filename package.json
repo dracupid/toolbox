@@ -1,0 +1,35 @@
+{
+  "name": "@jaxonzhao/toolbox",
+  "version": "1.0.0",
+  "description": "jaxon's toolbox.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "Jaxon Zhao",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@types/node": "18.11.10",
+    "eslint": "8.29.0",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.0",
+    "prettier-plugin-organize-imports": "3.2.1",
+    "typescript": "4.9.3"
+  },
+  "dependencies": {
+    "@jaxonzhao/eslint-config-react": "workspace:^1.0.0",
+    "@jaxonzhao/eslint-config-typescript": "workspace:^1.0.0",
+    "@jaxonzhao/prettier-config": "workspace:^1.0.0",
+    "@types/react": "18.0.26",
+    "react": "18.2.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module"
+}
