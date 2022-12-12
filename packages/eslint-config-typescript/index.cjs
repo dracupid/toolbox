@@ -17,7 +17,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
         'plugin:@typescript-eslint/eslint-recommended',
       ],
-      rules: require('./rules.cjs'),
+      rules: require('./rules-generated.cjs'),
     },
     {
       files: ['**/*.d.ts', '**/*.d.mts', '**/*.d.cts'],

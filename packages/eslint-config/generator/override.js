@@ -4,10 +4,10 @@
  */
 
 // Disable following rules, and reason
+/** @type Set<string> */
 export const disabledRules = new Set([
   // Problems
   'no-duplicate-imports', // handled by prettier-plugin-organize-imports
-  'no-use-before-define', // no strong preference
 
   // Suggestions
   'camelcase', // No final decision yet
@@ -34,7 +34,7 @@ export const disabledRules = new Set([
   'max-params',
   'max-statements',
   'multiline-comment-style', // no strong preference
-  'no-confusing-arrow', // I want short code
+  'no-confusing-arrow', // I want short code, and disabled by prettier
   'no-console', // I need it
   'no-continue', // I need it
   'no-div-regex', // Syntax highlighting is good enough
@@ -42,6 +42,7 @@ export const disabledRules = new Set([
   'no-empty-function', // harmless
   'no-empty-static-block', // harmless
   'no-eq-null', // I prefer using this to detect null or undefined
+  'no-extra-semi', // Disabled by prettier
   'no-implicit-coercion', // no strong preference
   'no-inline-comments', // no strong preference
   'no-magic-numbers', // No final decision yet
@@ -103,6 +104,11 @@ export const rulesOptions = {
     destructuredArrayIgnorePattern: /^_/.source,
     caughtErrors: 'all',
     caughtErrorsIgnorePattern: /^_$/.source,
+  },
+  'no-use-before-define': {
+    functions: false,
+    classes: false,
+    allowNamedExports: true,
   },
   'use-isnan': {
     enforceForSwitchCase: true,

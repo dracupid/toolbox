@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.cjs",
   "scripts": {
-    "gen": "./generator/generate-eslint-rules.js"
+    "gen": "./generator/bin.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "@jaxonzhao/eslint-utils": "workspace:^1.0.0",
     "eslint-config-prettier": "8.5.0",
@@ -16,7 +17,6 @@
     "eslint-plugin-n": "15.6.0",
     "eslint-plugin-unicorn": "45.0.1"
   },
-  "type": "module",
   "devDependencies": {
     "eslint": "8.29.0"
   },

@@ -1,18 +1,26 @@
 // @ts-check
 
 /**
- * @param {string} pluginName
- * @param {Record<string, ('error' | 'off')|[('error' | 'off'), unknown]>} rules
- * @param {Partial<{isExtension: boolean}>} options
- * @returns {Record<string, unknown>}
+ * @typedef {Record<string, boolean|string|number>} _RuleOption
+ * @typedef {string|_RuleOption|[string, _RuleOption]} RuleOption
  */
-function definePluginRules(pluginName, rules, options = {}) {
+
+/**
+ * We don't use warn
+ * @typedef {'error'|'off'|0|2|_RuleOption|['error'|'off', _RuleOption]|['error'|'off', string, _RuleOption]} Rule
+ */
+
+/**
+ * @param {string} pluginName
+ * @param {Record<string, Rule>} rules
+ * @returns {Record<string, Rule>}
+ */
+function definePluginRules(pluginName, rules) {
   return Object.entries(rules).reduce((rules, [name, value]) => {
     // disable the base rule as it can report incorrect errors
-    if (options.isExtension) rules[name] = 'off'
     rules[`${pluginName}/${name}`] = value
     return rules
-  }, /** @type{Record<string, unknown>} */ ({}))
+  }, /** @type{Record<string, Rule>} */ ({}))
 }
 
 /**
