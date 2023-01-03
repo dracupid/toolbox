@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "pnpm publish -r --access=public --registry=https://registry.npmjs.org/"
   },
   "private": true,
   "keywords": [],
