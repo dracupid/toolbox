@@ -1,13 +1,16 @@
 {
   "name": "@jaxonzhao/eslint-config",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Custom ESLint rules.",
   "main": "index.cjs",
   "scripts": {
     "gen": "./generator/bin.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eslint",
+    "rules"
+  ],
+  "author": "Jaxon Zhao",
   "license": "ISC",
   "type": "module",
   "dependencies": {

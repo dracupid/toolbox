@@ -1,13 +1,16 @@
 {
   "name": "@jaxonzhao/eslint-utils",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Useful utils to generate ESLint rules.",
   "main": "index.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eslint",
+    "utils"
+  ],
+  "author": "Jaxon Zhao",
   "license": "ISC",
   "type": "module",
   "engines": {

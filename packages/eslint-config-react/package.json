@@ -1,13 +1,17 @@
 {
   "name": "@jaxonzhao/eslint-config-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Custom ESLint rules for react.",
   "main": "index.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eslint",
+    "react",
+    "rules"
+  ],
+  "author": "Jaxon Zhao",
   "license": "ISC",
   "dependencies": {
     "@jaxonzhao/eslint-utils": "workspace:^1.0.0",

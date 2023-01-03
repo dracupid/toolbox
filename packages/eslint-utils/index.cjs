@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * @typedef {Record<string, boolean|string|number>} _RuleOption
+ * @typedef {Record<string, boolean|string|number> | string} _RuleOption
  * @typedef {string|_RuleOption|[string, _RuleOption]} RuleOption
  */
 
