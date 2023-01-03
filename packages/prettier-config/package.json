@@ -1,7 +1,7 @@
 {
   "name": "@jaxonzhao/prettier-config",
   "version": "0.0.1",
-  "description": "",
+  "description": "Custom Prettier config",
   "main": "prettier.config.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
