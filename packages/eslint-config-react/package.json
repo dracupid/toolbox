@@ -14,7 +14,7 @@
   "author": "Jaxon Zhao",
   "license": "ISC",
   "dependencies": {
-    "@jaxonzhao/eslint-utils": "workspace:^1.0.0",
+    "@jaxonzhao/eslint-utils": "workspace:*",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0"
   },

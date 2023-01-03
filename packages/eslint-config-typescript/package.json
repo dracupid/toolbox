@@ -15,8 +15,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@jaxonzhao/eslint-config": "workspace:^1.0.0",
-    "@jaxonzhao/eslint-utils": "workspace:^1.0.0",
+    "@jaxonzhao/eslint-config": "workspace:*",
+    "@jaxonzhao/eslint-utils": "workspace:*",
     "@typescript-eslint/eslint-plugin": "5.45.1",
     "@typescript-eslint/parser": "5.45.1"
   },

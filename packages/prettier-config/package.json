@@ -1,6 +1,6 @@
 {
   "name": "@jaxonzhao/prettier-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "prettier.config.cjs",
   "scripts": {
@@ -10,5 +10,11 @@
     "prettier"
   ],
   "author": "Jaxon Zhao",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prettier-plugin-organize-imports": "3.2.1"
+  },
+  "peerDependencies": {
+    "prettier": "^2"
+  }
 }

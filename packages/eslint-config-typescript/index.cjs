@@ -11,7 +11,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
       parser: require.resolve('@typescript-eslint/parser'),
-      plugins: ['@typescript-eslint/eslint-plugin'],
+      plugins: ['@typescript-eslint'],
       extends: [
         // disable unnecessary eslint-rules
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts

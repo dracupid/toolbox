@@ -21,13 +21,13 @@ const result = {
   ...Object.fromEntries(
     Object.entries(
       definePluginRules(
-        'typescript',
+        '@typescript-eslint',
         generateRules(tsBaseRules, disabledRules, rulesOptions)
       )
     ).sort((a, b) => a[0].localeCompare(b[0]))
   ),
   ...defineExtendedPluginRules(
-    'typescript',
+    '@typescript-eslint',
     /** @type {any}*/ (esRules),
     Object.fromEntries(
       rules

@@ -5,5 +5,5 @@ module.exports = {
   tabWidth: 2,
   printWidth: 80,
   endOfLine: 'lf',
-  plugins: ['prettier-plugin-organize-imports'],
+  plugins: [require.resolve('prettier-plugin-organize-imports')],
 }
