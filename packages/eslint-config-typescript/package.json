@@ -21,9 +21,9 @@
     "@typescript-eslint/parser": "5.55.0"
   },
   "devDependencies": {
-    "@types/eslint": "8.21.3",
-    "eslint": "8.36.0",
-    "typescript": "5.0.2"
+    "@types/eslint": "8.4.10",
+    "eslint": "^8",
+    "typescript": "^5"
   },
   "peerDependencies": {
     "eslint": "^8"
