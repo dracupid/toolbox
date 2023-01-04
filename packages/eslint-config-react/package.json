@@ -1,6 +1,6 @@
 {
   "name": "@jaxonzhao/eslint-config-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom ESLint rules for react.",
   "main": "index.cjs",
   "scripts": {
