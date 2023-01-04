@@ -9,7 +9,7 @@ import {
 } from '@jaxonzhao/eslint-utils/build.js'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import path from 'path'
-import { disabledRules, extendTulesOptions, rulesOptions } from './override.js'
+import { disabledRules, extendRulesOptions, rulesOptions } from './override.js'
 
 const rules = Object.entries(tsPlugin.rules)
 
@@ -42,7 +42,7 @@ const result = {
             : [name, name]
         })
     ),
-    extendTulesOptions
+    extendRulesOptions
   ),
   // https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
   // https://github.com/xojs/xo/blob/main/lib/options-manager.js

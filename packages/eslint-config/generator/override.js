@@ -110,6 +110,9 @@ export const rulesOptions = {
     classes: false,
     allowNamedExports: true,
   },
+  'require-atomic-updates': {
+    allowProperties: true,
+  },
   'use-isnan': {
     enforceForSwitchCase: true,
     enforceForIndexOf: true,
@@ -122,12 +125,23 @@ export const rulesOptions = {
   'accessor-pairs': {
     enforceForClassMembers: true,
   },
-  'arrow-body-style': ['as-needed', { requireReturnForObjectLiteral: true }],
+  'arrow-body-style': [
+    'as-needed',
+    {
+      requireReturnForObjectLiteral: true,
+    },
+  ],
   eqeqeq: 'smart',
-  'func-name-matching': { considerPropertyDescriptor: true },
+  'func-name-matching': {
+    considerPropertyDescriptor: true,
+  },
   'func-names': 'as-needed',
-  'no-empty': { allowEmptyCatch: true },
-  'no-multi-assign': { ignoreNonDeclaration: true },
+  'no-empty': {
+    allowEmptyCatch: true,
+  },
+  'no-multi-assign': {
+    ignoreNonDeclaration: true,
+  },
   'no-unused-expressions': {
     allowShortCircuit: true,
     allowTernary: true,
@@ -137,7 +151,15 @@ export const rulesOptions = {
   'no-useless-computed-key': {
     enforceForClassMembers: true,
   },
-  'object-shorthand': ['always', { avoidExplicitReturnArrows: true }],
+  'no-void': {
+    allowAsStatement: true,
+  },
+  'object-shorthand': [
+    'always',
+    {
+      avoidExplicitReturnArrows: true,
+    },
+  ],
   'prefer-arrow-callback': {
     allowNamedFunctions: true,
   },

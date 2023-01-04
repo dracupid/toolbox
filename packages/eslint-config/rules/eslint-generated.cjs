@@ -95,7 +95,12 @@ module.exports = {
     }
   ],
   "no-useless-backreference": "error",
-  "require-atomic-updates": "error",
+  "require-atomic-updates": [
+    "error",
+    {
+      "allowProperties": true
+    }
+  ],
   "use-isnan": [
     "error",
     {
@@ -268,7 +273,12 @@ module.exports = {
   "no-useless-rename": "error",
   "no-useless-return": "error",
   "no-var": "error",
-  "no-void": "error",
+  "no-void": [
+    "error",
+    {
+      "allowAsStatement": true
+    }
+  ],
   "no-warning-comments": 0,
   "no-with": "error",
   "object-shorthand": [

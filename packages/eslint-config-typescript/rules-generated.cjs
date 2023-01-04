@@ -128,7 +128,7 @@ module.exports = {
     }
   ],
   "@typescript-eslint/prefer-namespace-keyword": "error",
-  "@typescript-eslint/prefer-nullish-coalescing": "error",
+  "@typescript-eslint/prefer-nullish-coalescing": 0,
   "@typescript-eslint/prefer-optional-chain": "error",
   "@typescript-eslint/prefer-readonly": "error",
   "@typescript-eslint/prefer-readonly-parameter-types": 0,

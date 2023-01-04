@@ -22,6 +22,7 @@ export const disabledRules = new Set([
   'no-var-requires', // enable no-require-imports
   'parameter-properties', // no strong preference
   'prefer-enum-initializers', // it's not a good idea
+  'prefer-nullish-coalescing', // No final decision yet
   'prefer-readonly-parameter-types', // too annoying
   'sort-type-constituents', // no need
   'strict-boolean-expressions', // too strict
@@ -93,7 +94,7 @@ export const rulesOptions = {
 /**
  * @type {Record<string, import('@jaxonzhao/eslint-utils').RuleOption>}
  */
-export const extendTulesOptions = {
+export const extendRulesOptions = {
   'no-throw-literal': {
     allowThrowingUnknown: true, // needed for rethrow error
   },

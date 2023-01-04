@@ -24,7 +24,7 @@ module.exports = definePluginRules('unicorn', {
   'no-useless-length-check': 'error',
   'no-useless-promise-resolve-reject': 'error',
   'no-useless-spread': 'error',
-  'number-literal-case': 'error',
+  // 'number-literal-case': 'error', // conflict with prettier: https://github.com/prettier/prettier/pull/498
   'prefer-array-flat': 'error',
   'prefer-array-flat-map': 'error',
   'prefer-array-index-of': 'error',
