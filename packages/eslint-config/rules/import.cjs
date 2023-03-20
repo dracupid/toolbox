@@ -11,7 +11,7 @@ module.exports = definePluginRules('import', {
    */
 
   // Helpful warnings
-  // 'no-empty-named-blocks': 'error', // not publish yet
+  'no-empty-named-blocks': 'error',
 
   // Module systems
 
@@ -29,6 +29,7 @@ module.exports = definePluginRules('import', {
   //     ignorePackages: true,
   //   },
   // ],
+  // 'consistent-type-specifier-style': ['error', 'prefer-top-level'], // not decided yet
   first: 'error',
   'no-named-default': 'error',
   'no-namespace': 'error',

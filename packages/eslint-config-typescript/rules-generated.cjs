@@ -80,6 +80,7 @@ module.exports = {
     }
   ],
   "@typescript-eslint/no-for-in-array": "error",
+  "@typescript-eslint/no-import-type-side-effects": "error",
   "@typescript-eslint/no-inferrable-types": "error",
   "@typescript-eslint/no-invalid-void-type": 0,
   "@typescript-eslint/no-meaningless-void-operator": "error",
@@ -90,6 +91,7 @@ module.exports = {
       "checksVoidReturn": false
     }
   ],
+  "@typescript-eslint/no-mixed-enums": "error",
   "@typescript-eslint/no-namespace": "error",
   "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
   "@typescript-eslint/no-non-null-asserted-optional-chain": "error",

@@ -12,7 +12,7 @@
   "author": "Jaxon Zhao",
   "license": "ISC",
   "dependencies": {
-    "prettier-plugin-organize-imports": "3.2.1"
+    "prettier-plugin-organize-imports": "3.2.2"
   },
   "peerDependencies": {
     "prettier": "^2"
