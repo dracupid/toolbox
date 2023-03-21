@@ -1,5 +1,17 @@
 # @jaxonzhao/eslint-config-typescript
 
+## 0.1.0
+
+### Minor Changes
+
+- update rules and dependencies
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/eslint-config@0.1.0
+  - @jaxonzhao/eslint-utils@0.1.0
+
 ## 0.0.3
 
 ### Patch Changes
