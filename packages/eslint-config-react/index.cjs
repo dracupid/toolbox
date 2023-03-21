@@ -14,18 +14,13 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
   },
-  overrides: [
-    {
-      files: ['**/*.tsx', '**/*.jsx'],
-      plugins: ['react', 'react-hooks'],
-      extends: [
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime', // default use React >= 17
-        'plugin:react-hooks/recommended',
-      ],
-      rules: {
-        ...require('./rules/react.cjs'),
-      },
-    },
+  plugins: ['react', 'react-hooks'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime', // default use React >= 17
+    'plugin:react-hooks/recommended',
   ],
+  rules: {
+    ...require('./rules/react.cjs'),
+  },
 }

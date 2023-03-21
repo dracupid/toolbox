@@ -31,7 +31,7 @@ module.exports = definePluginRules('react', {
   'no-did-mount-set-state': 'error',
   'no-did-update-set-state': 'error',
   'no-namespace': 'error',
-  'no-object-type-as-default-prop': 'error',
+  // 'no-object-type-as-default-prop': 'error',
   'no-redundant-should-component-update': 'error',
   'no-string-refs': [
     'error',

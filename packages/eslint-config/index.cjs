@@ -1,5 +1,7 @@
 // @ts-check
 
+const { definePluginRules } = require('@jaxonzhao/eslint-utils')
+
 /**
  * reference
  * - https://github.com/xojs/xo
@@ -42,4 +44,14 @@ module.exports = {
     ...require('./rules/n.cjs'),
     ...require('./rules/unicorn.cjs'),
   },
+  overrides: [
+    {
+      files: ['**/*.config.js'],
+      rules: {
+        ...definePluginRules('unicorn', {
+          'prefer-module': 'off',
+        }),
+      },
+    },
+  ],
 }

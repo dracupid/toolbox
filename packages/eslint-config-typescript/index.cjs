@@ -1,5 +1,7 @@
 // @ts-check
+const { disableRules } = require('@jaxonzhao/eslint-utils')
 
+const tsPluginName = '@typescript-eslint'
 /**
  * reference:
  * - https://github.com/standard/eslint-config-standard-with-typescript
@@ -11,7 +13,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
       parser: require.resolve('@typescript-eslint/parser'),
-      plugins: ['@typescript-eslint'],
+      plugins: [tsPluginName],
       extends: [
         // disable unnecessary eslint-rules
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
@@ -20,10 +22,19 @@ module.exports = {
       rules: require('./rules-generated.cjs'),
     },
     {
+      files: ['**/*.cts'],
+      rules: {
+        ...disableRules(tsPluginName, [
+          'no-require-imports', // disable for commonJS module
+        ]),
+      },
+    },
+    {
       files: ['**/*.d.ts', '**/*.d.mts', '**/*.d.cts'],
       rules: {
-        // allow using in .d.ts
-        'triple-slash-reference': 'off',
+        ...disableRules(tsPluginName, [
+          'triple-slash-reference', // allow using in .d.ts
+        ]),
       },
     },
   ],

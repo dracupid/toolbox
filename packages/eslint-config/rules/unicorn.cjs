@@ -46,5 +46,5 @@ module.exports = definePluginRules('unicorn', {
   'prefer-string-replace-all': 'error',
   'prefer-string-slice': 'error',
   'prefer-string-starts-ends-with': 'error',
-  'prefer-ternary': 'error',
+  'prefer-ternary': ['error', 'only-single-line'],
 })
