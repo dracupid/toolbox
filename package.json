@@ -13,16 +13,16 @@
   "author": "Jaxon Zhao",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.26.0",
-    "@commitlint/cli": "17.4.4",
-    "@commitlint/config-conventional": "17.4.4",
-    "@types/node": "18.15.5",
-    "@types/react": "18.0.28",
-    "eslint": "8.36.0",
+    "@changesets/cli": "2.26.2",
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "17.6.7",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "eslint": "8.45.0",
     "husky": "8.0.3",
-    "lint-staged": "13.2.0",
-    "prettier": "2.8.6",
-    "typescript": "5.0.2"
+    "lint-staged": "13.2.3",
+    "prettier": "3.0.0",
+    "typescript": "5.1.6"
   },
   "dependencies": {
     "@jaxonzhao/eslint-config-react": "workspace:*",

@@ -17,11 +17,11 @@
   "dependencies": {
     "@jaxonzhao/eslint-config": "workspace:*",
     "@jaxonzhao/eslint-utils": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "5.56.0",
-    "@typescript-eslint/parser": "5.56.0"
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0"
   },
   "devDependencies": {
-    "@types/eslint": "8.21.3",
+    "@types/eslint": "8.44.0",
     "eslint": "^8",
     "typescript": "^5"
   },

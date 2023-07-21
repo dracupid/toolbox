@@ -57,6 +57,7 @@ module.exports = {
     }
   ],
   "@typescript-eslint/no-duplicate-enum-values": "error",
+  "@typescript-eslint/no-duplicate-type-constituents": "error",
   "@typescript-eslint/no-dynamic-delete": "error",
   "@typescript-eslint/no-empty-interface": [
     "error",
@@ -110,6 +111,7 @@ module.exports = {
   "@typescript-eslint/no-unsafe-assignment": "error",
   "@typescript-eslint/no-unsafe-call": "error",
   "@typescript-eslint/no-unsafe-declaration-merging": "error",
+  "@typescript-eslint/no-unsafe-enum-comparison": "error",
   "@typescript-eslint/no-unsafe-member-access": "error",
   "@typescript-eslint/no-unsafe-return": "error",
   "@typescript-eslint/no-useless-empty-export": "error",
