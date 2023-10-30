@@ -1,6 +1,6 @@
 {
   "name": "@jaxonzhao/eslint-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Useful utils to generate ESLint rules.",
   "main": "index.cjs",
   "scripts": {

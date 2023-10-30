@@ -1,5 +1,11 @@
 # @jaxonzhao/eslint-utils
 
+## 1.0.1
+
+### Patch Changes
+
+- Just want a larger version
+
 ## 1.0.0
 
 ### Major Changes
