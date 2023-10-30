@@ -14,15 +14,15 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "2.26.2",
-    "@commitlint/cli": "17.6.7",
-    "@commitlint/config-conventional": "17.6.7",
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.15",
-    "eslint": "8.45.0",
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.1.0",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "eslint": "8.52.0",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3",
-    "prettier": "3.0.0",
-    "typescript": "5.1.6"
+    "lint-staged": "15.0.2",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
   },
   "dependencies": {
     "@jaxonzhao/eslint-config-react": "workspace:*",

@@ -88,6 +88,7 @@ export const rulesOptions = {
   'array-callback-return': {
     allowImplicit: true,
     checkForEach: true,
+    allowVoid: true,
   },
   'no-self-assign': { props: true },
   'no-unsafe-negation': {

@@ -5,7 +5,8 @@ module.exports = {
     "error",
     {
       "allowImplicit": true,
-      "checkForEach": true
+      "checkForEach": true,
+      "allowVoid": true
     }
   ],
   "constructor-super": "error",
@@ -222,9 +223,9 @@ module.exports = {
   "no-nested-ternary": 0,
   "no-new": "error",
   "no-new-func": "error",
-  "no-new-object": "error",
   "no-new-wrappers": "error",
   "no-nonoctal-decimal-escape": "error",
+  "no-object-constructor": "error",
   "no-octal": "error",
   "no-octal-escape": "error",
   "no-param-reassign": 0,
@@ -238,7 +239,6 @@ module.exports = {
   "no-restricted-properties": 0,
   "no-restricted-syntax": 0,
   "no-return-assign": "error",
-  "no-return-await": "error",
   "no-script-url": "error",
   "no-sequences": "error",
   "no-shadow": 0,
