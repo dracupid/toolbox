@@ -33,7 +33,9 @@ const result = {
       rules
         .filter(
           ([_, rule]) =>
-            !!rule.meta.docs?.extendsBaseRule && rule.meta.type !== 'layout'
+            !!rule.meta.docs?.extendsBaseRule &&
+            rule.meta.type !== 'layout' &&
+            rule.meta.docs?.extendsBaseRule !== 'no-return-await' // TODO: this rule is deprecated in ESLint
         )
         .map(([name, rule]) => {
           const extendsBaseRule = rule.meta.docs?.extendsBaseRule

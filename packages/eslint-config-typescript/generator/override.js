@@ -73,9 +73,6 @@ export const rulesOptions = {
   'require-array-sort-compare': {
     ignoreStringArrays: true,
   },
-  'restrict-plus-operands': {
-    checkCompoundAssignments: true,
-  },
   'restrict-template-expressions': {
     allowNumber: true,
     allowBoolean: true,

@@ -100,7 +100,6 @@ module.exports = {
   "@typescript-eslint/no-redundant-type-constituents": "error",
   "@typescript-eslint/no-require-imports": "error",
   "@typescript-eslint/no-this-alias": "error",
-  "@typescript-eslint/no-type-alias": 0,
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-condition": 0,
   "@typescript-eslint/no-unnecessary-qualifier": "error",
@@ -146,12 +145,7 @@ module.exports = {
       "ignoreStringArrays": true
     }
   ],
-  "@typescript-eslint/restrict-plus-operands": [
-    "error",
-    {
-      "checkCompoundAssignments": true
-    }
-  ],
+  "@typescript-eslint/restrict-plus-operands": "error",
   "@typescript-eslint/restrict-template-expressions": [
     "error",
     {
@@ -178,18 +172,20 @@ module.exports = {
       "ignoreDifferentlyNamedParameters": true
     }
   ],
+  "class-methods-use-this": 0,
+  "@typescript-eslint/class-methods-use-this": 0,
   "default-param-last": 0,
   "@typescript-eslint/default-param-last": "error",
   "dot-notation": 0,
   "@typescript-eslint/dot-notation": "error",
   "init-declarations": 0,
   "@typescript-eslint/init-declarations": 0,
+  "max-params": 0,
+  "@typescript-eslint/max-params": 0,
   "no-array-constructor": 0,
   "@typescript-eslint/no-array-constructor": "error",
   "no-dupe-class-members": 0,
   "@typescript-eslint/no-dupe-class-members": "error",
-  "no-duplicate-imports": 0,
-  "@typescript-eslint/no-duplicate-imports": 0,
   "no-empty-function": 0,
   "@typescript-eslint/no-empty-function": 0,
   "no-extra-semi": 0,
@@ -253,10 +249,10 @@ module.exports = {
   ],
   "no-useless-constructor": 0,
   "@typescript-eslint/no-useless-constructor": "error",
+  "prefer-destructuring": 0,
+  "@typescript-eslint/prefer-destructuring": 0,
   "require-await": 0,
   "@typescript-eslint/require-await": "error",
-  "no-return-await": 0,
-  "@typescript-eslint/return-await": "error",
   "import/named": "off",
   "import/extensions": "off",
   "unicorn/no-static-only-class": "off",
