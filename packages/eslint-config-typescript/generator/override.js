@@ -30,6 +30,8 @@ export const disabledRules = new Set([
   'unbound-method', // too annoying
 ])
 
+export const deprecatedInESLintBlock = new Set(['no-extra-semi'])
+
 // Config rules
 /**
  * @type {Record<string, import('@jaxonzhao/eslint-utils').RuleOption>}

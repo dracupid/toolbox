@@ -9,7 +9,12 @@ import {
 } from '@jaxonzhao/eslint-utils/build.js'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import path from 'path'
-import { disabledRules, extendRulesOptions, rulesOptions } from './override.js'
+import {
+  deprecatedInESLintBlock,
+  disabledRules,
+  extendRulesOptions,
+  rulesOptions,
+} from './override.js'
 
 const rules = Object.entries(tsPlugin.rules)
 
@@ -32,7 +37,8 @@ const result = {
     Object.fromEntries(
       rules
         .filter(
-          ([_, rule]) =>
+          ([name, rule]) =>
+            !deprecatedInESLintBlock.has(name) &&
             !!rule.meta.docs?.extendsBaseRule &&
             rule.meta.type !== 'layout' &&
             rule.meta.docs?.extendsBaseRule !== 'no-return-await' // TODO: this rule is deprecated in ESLint

@@ -13,7 +13,7 @@ module.exports = {
   "for-direction": "error",
   "getter-return": "error",
   "no-async-promise-executor": "error",
-  "no-await-in-loop": "error",
+  "no-await-in-loop": 0,
   "no-class-assign": "error",
   "no-compare-neg-zero": "error",
   "no-cond-assign": "error",
@@ -176,7 +176,6 @@ module.exports = {
   "no-bitwise": "error",
   "no-caller": "error",
   "no-case-declarations": "error",
-  "no-confusing-arrow": 0,
   "no-console": 0,
   "no-continue": 0,
   "no-delete-var": "error",
@@ -196,8 +195,6 @@ module.exports = {
   "no-extra-bind": "error",
   "no-extra-boolean-cast": "error",
   "no-extra-label": "error",
-  "no-extra-semi": 0,
-  "no-floating-decimal": "error",
   "no-global-assign": "error",
   "no-implicit-coercion": 0,
   "no-implicit-globals": "error",
@@ -211,7 +208,6 @@ module.exports = {
   "no-lonely-if": "error",
   "no-loop-func": "error",
   "no-magic-numbers": 0,
-  "no-mixed-operators": 0,
   "no-multi-assign": [
     "error",
     {
@@ -289,7 +285,6 @@ module.exports = {
     }
   ],
   "one-var": 0,
-  "one-var-declaration-per-line": 0,
   "operator-assignment": 0,
   "prefer-arrow-callback": [
     "error",
@@ -324,7 +319,6 @@ module.exports = {
   "prefer-rest-params": "error",
   "prefer-spread": "error",
   "prefer-template": 0,
-  "quote-props": 0,
   "radix": [
     "error",
     "as-needed"
@@ -335,7 +329,6 @@ module.exports = {
   "sort-imports": 0,
   "sort-keys": 0,
   "sort-vars": 0,
-  "spaced-comment": 0,
   "strict": 0,
   "symbol-description": "error",
   "vars-on-top": 0,
