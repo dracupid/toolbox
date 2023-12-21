@@ -34,7 +34,7 @@ export const disabledRules = new Set([
   'max-params',
   'max-statements',
   'multiline-comment-style', // no strong preference
-  'no-confusing-arrow', // I want short code, and disabled by prettier
+  'no-await-in-loop', // await in loop is useful
   'no-console', // I need it
   'no-continue', // I need it
   'no-div-regex', // Syntax highlighting is good enough
@@ -42,11 +42,9 @@ export const disabledRules = new Set([
   'no-empty-function', // harmless
   'no-empty-static-block', // harmless
   'no-eq-null', // I prefer using this to detect null or undefined
-  'no-extra-semi', // Disabled by prettier
   'no-implicit-coercion', // no strong preference
   'no-inline-comments', // no strong preference
   'no-magic-numbers', // No final decision yet
-  'no-mixed-operators', // Disabled by prettier
   'no-multi-str', // no strong preference
   'no-negated-condition', // no strong preference
   'no-nested-ternary', // A good formatter will make it readable
@@ -68,12 +66,10 @@ export const disabledRules = new Set([
   'prefer-named-capture-group', // no strong preference
   'prefer-object-has-own', // need ES2022
   'prefer-template', // harmless
-  'quote-props', // Disabled by prettier
   'require-unicode-regexp', // No final decision yet
   'sort-imports', // handled by prettier-plugin-organize-imports
   'sort-keys', // no strong preference
   'sort-vars', // no strong preference
-  'spaced-comment', // no strong preference
   'strict', // maybe unnecessary now
   'vars-on-top', // annoying
 ])
