@@ -1,5 +1,16 @@
 # @jaxonzhao/eslint-config-react
 
+## 1.1.0
+
+### Minor Changes
+
+- update rules and dependencies
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/eslint-utils@1.1.0
+
 ## 1.0.1
 
 ### Patch Changes

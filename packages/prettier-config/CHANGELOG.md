@@ -1,5 +1,11 @@
 # @jaxonzhao/prettier-config
 
+## 1.1.0
+
+### Minor Changes
+
+- update rules and dependencies
+
 ## 1.0.1
 
 ### Patch Changes
