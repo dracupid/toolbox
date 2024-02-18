@@ -1,4 +1,7 @@
-module.exports = {
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+
+export default {
   semi: false,
   singleQuote: true,
   trailingComma: 'es5',

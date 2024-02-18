@@ -2,7 +2,7 @@
   "name": "@jaxonzhao/prettier-config",
   "version": "1.1.0",
   "description": "Custom Prettier config",
-  "main": "prettier.config.cjs",
+  "exports": "./prettier.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,11 +17,8 @@
   "dependencies": {
     "prettier-plugin-organize-imports": "3.2.4"
   },
-  "devDependencies": {
-    "typescript": "*",
-    "prettier": "*"
-  },
   "peerDependencies": {
-    "prettier": ">=2.0"
-  }
+    "prettier": "^3.0.0"
+  },
+  "type": "module"
 }
