@@ -11,7 +11,7 @@ import { writeFile } from 'node:fs/promises'
 /**
  * @param {Map<string, RuleModule>} allRules
  * @param {Set<string>} disabledRules
- * @param {RulesRecord} rulesOptions
+ * @param {import('./index').RuleOptions} rulesOptions
  */
 function validateConfigs(allRules, disabledRules, rulesOptions) {
   for (const name of disabledRules) {
@@ -30,7 +30,7 @@ function validateConfigs(allRules, disabledRules, rulesOptions) {
  * @param {string} pluginName
  * @param {RulesRecord} baseRules
  * @param {Record<string, string>} extendMap
- * @param {RulesRecord} rulesOptions
+ * @param {import('./index').RuleOptions} rulesOptions
  * @returns {RulesRecord}
  */
 export function defineExtendedPluginRules(
@@ -83,7 +83,7 @@ export function defineExtendedPluginRules(
 /**
  * @param {Map<string, RuleModule>} allRules
  * @param {Set<string>} disabledRules
- * @param {RulesRecord} rulesOptions
+ * @param {import('./index').RuleOptions} rulesOptions
  * @returns {RulesRecord}
  */
 export function generateRules(allRules, disabledRules, rulesOptions) {

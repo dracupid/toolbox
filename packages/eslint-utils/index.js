@@ -1,6 +1,9 @@
 // @ts-check
 
 /**
+ * @typedef {Record<string, boolean|string|number> | string} _RuleOption
+ * @typedef {string|_RuleOption|[string, _RuleOption]} RuleOption
+ * @typedef {Record<string, RuleOption>} RuleOptions
  * @typedef {import('eslint').Linter.RulesRecord} RulesRecord
  */
 

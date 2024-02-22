@@ -91,7 +91,7 @@ export const rulesOptions = {
 
 // Config extend rules
 /**
- * @type {Record<string, import('@jaxonzhao/eslint-utils').RuleOption>}
+ * @type {import('@jaxonzhao/eslint-utils').RuleOptions}
  */
 export const extendRulesOptions = {
   'no-throw-literal': {

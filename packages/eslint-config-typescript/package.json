@@ -2,7 +2,7 @@
   "name": "@jaxonzhao/eslint-config-typescript",
   "version": "1.1.0",
   "description": "Custom ESLint rules for typescript.",
-  "main": "index.cjs",
+  "main": "index.js",
   "scripts": {
     "gen": "./generator/bin.js"
   },
@@ -17,18 +17,17 @@
   "dependencies": {
     "@jaxonzhao/eslint-config": "workspace:*",
     "@jaxonzhao/eslint-utils": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "6.15.0",
-    "@typescript-eslint/parser": "6.15.0"
+    "typescript-eslint": "^7.0.2"
   },
   "devDependencies": {
-    "@types/eslint": "8.56.0",
-    "eslint": "^8",
+    "@types/eslint": "8.56.2",
+    "eslint": "^8.23.0",
     "typescript": "^5"
   },
   "peerDependencies": {
-    "eslint": "^8"
+    "eslint": "^8.23.0"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+    "node": "^18.18.0 || >=20.0.0"
   }
 }

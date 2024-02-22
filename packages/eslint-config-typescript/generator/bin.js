@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // @ts-check
-import esRules from '@jaxonzhao/eslint-config/rules/eslint-generated.cjs'
+import esRules from '@jaxonzhao/eslint-config/rules/eslint-generated.js'
 import { definePluginRules, disableRules } from '@jaxonzhao/eslint-utils'
 import {
   defineExtendedPluginRules,
@@ -33,7 +33,7 @@ const result = {
   ),
   ...defineExtendedPluginRules(
     '@typescript-eslint',
-    /** @type {any}*/ (esRules),
+    esRules,
     Object.fromEntries(
       rules
         .filter(
@@ -72,7 +72,7 @@ const result = {
 writeRules(
   path.join(
     path.dirname(new URL(import.meta.url).pathname),
-    '../rules-generated.cjs'
+    '../rules-generated.js'
   ),
   result
 )

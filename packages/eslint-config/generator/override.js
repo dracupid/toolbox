@@ -4,7 +4,6 @@
  */
 
 // Disable following rules, and reason
-/** @type Set<string> */
 export const disabledRules = new Set([
   // Problems
   'no-duplicate-imports', // handled by prettier-plugin-organize-imports
@@ -75,10 +74,7 @@ export const disabledRules = new Set([
 ])
 
 // Config rules
-/**
- * @typedef {Record<string, boolean|string>} RuleOption
- */
-/** @type {Record<string, string|RuleOption|[string, RuleOption]>} */
+/** @type {import('@jaxonzhao/eslint-utils').RuleOptions} */
 export const rulesOptions = {
   // Problems
   'array-callback-return': {
