@@ -1,8 +1,8 @@
 // @ts-check
 
-const { definePluginRules } = require('@jaxonzhao/eslint-utils')
+import { definePluginRules } from '@jaxonzhao/eslint-utils'
 
-module.exports = definePluginRules('import', {
+export default definePluginRules('import', {
   /**
    * It is not easy for an ESLint plugin to recognize all imports and exports.
    * This should be done by a compiler or a bundler.

@@ -1,9 +1,9 @@
 // @ts-check
 
-const { definePluginRules } = require('@jaxonzhao/eslint-utils')
+import { definePluginRules } from '@jaxonzhao/eslint-utils'
 
 // prefer typescript over the eslint rules
-module.exports = definePluginRules('unicorn', {
+export default definePluginRules('unicorn', {
   'better-regex': [
     'error',
     {

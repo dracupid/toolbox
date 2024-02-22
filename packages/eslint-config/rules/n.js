@@ -1,8 +1,8 @@
 // @ts-check
 
-const { definePluginRules } = require('@jaxonzhao/eslint-utils')
+import { definePluginRules } from '@jaxonzhao/eslint-utils'
 
-module.exports = definePluginRules('n', {
+export default definePluginRules('n', {
   /**
    * See import.js for the reason why not enable import/require relared-rules.
    */
