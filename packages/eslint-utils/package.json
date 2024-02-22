@@ -2,7 +2,7 @@
   "name": "@jaxonzhao/eslint-utils",
   "version": "1.1.0",
   "description": "Useful utils to generate ESLint rules.",
-  "main": "index.cjs",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +14,9 @@
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+    "node": "^18.18.0 || >=20.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "8.56.2"
   }
 }
