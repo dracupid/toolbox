@@ -2,7 +2,7 @@
   "name": "@jaxonzhao/eslint-config",
   "version": "1.1.0",
   "description": "Custom ESLint rules.",
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "gen": "./generator/bin.js"
   },
