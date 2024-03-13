@@ -1,5 +1,16 @@
 # @jaxonzhao/eslint-config
 
+## 2.0.0
+
+### Major Changes
+
+- use pure ESM
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/eslint-utils@2.0.0
+
 ## 1.1.0
 
 ### Minor Changes
