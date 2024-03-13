@@ -4,8 +4,7 @@
   "description": "jaxon's toolbox.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
+    "prepare": "husky",
     "publish": "pnpm publish -r --access=public --registry=https://registry.npmjs.org/"
   },
   "private": true,
@@ -14,16 +13,16 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "2.27.1",
-    "@commitlint/cli": "18.4.3",
-    "@commitlint/config-conventional": "18.4.3",
-    "@types/eslint": "8.56.2",
-    "@types/node": "20.10.5",
+    "@commitlint/cli": "19.1.0",
+    "@commitlint/config-conventional": "19.1.0",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.27",
     "@types/react": "18.2.45",
-    "eslint": "8.56.0",
-    "husky": "8.0.3",
-    "lint-staged": "15.2.0",
+    "eslint": "8.57.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
     "prettier": "3.2.5",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "dependencies": {
     "@jaxonzhao/eslint-config-react": "workspace:*",
