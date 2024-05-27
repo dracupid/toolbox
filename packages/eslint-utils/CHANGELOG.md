@@ -1,5 +1,11 @@
 # @jaxonzhao/eslint-utils
 
+## 2.1.0
+
+### Minor Changes
+
+- update dependencies and rules
+
 ## 2.0.0
 
 ### Major Changes
