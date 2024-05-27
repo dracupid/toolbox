@@ -6,12 +6,11 @@
  * Pre-generate to avoid unknown new rules.
  */
 import { generateRules, writeRules } from '@jaxonzhao/eslint-utils/build.js'
-import eslint from 'eslint'
+import eslint from 'eslint/use-at-your-own-risk'
 import path from 'path'
 import { disabledRules, rulesOptions } from './override.js'
 
-const linter = new eslint.Linter()
-const rules = linter.getRules()
+const rules = eslint.builtinRules
 
 writeRules(
   path.join(

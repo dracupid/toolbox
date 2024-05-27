@@ -179,8 +179,11 @@ export default {
       "ignoreDifferentlyNamedParameters": true
     }
   ],
+  "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
   "class-methods-use-this": 0,
   "@typescript-eslint/class-methods-use-this": 0,
+  "consistent-return": 0,
+  "@typescript-eslint/consistent-return": 0,
   "default-param-last": 0,
   "@typescript-eslint/default-param-last": "error",
   "dot-notation": 0,
@@ -254,6 +257,7 @@ export default {
   ],
   "no-useless-constructor": 0,
   "@typescript-eslint/no-useless-constructor": "error",
+  "@typescript-eslint/only-throw-error": "error",
   "prefer-destructuring": 0,
   "@typescript-eslint/prefer-destructuring": 0,
   "prefer-promise-reject-errors": 0,

@@ -2,7 +2,10 @@
   "name": "@jaxonzhao/eslint-utils",
   "version": "2.0.0",
   "description": "Useful utils to generate ESLint rules.",
-  "exports": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./build.js": "./build.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +20,6 @@
     "node": "^18.18.0 || >=20.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.5"
+    "@types/eslint": "^8.56.10"
   }
 }
