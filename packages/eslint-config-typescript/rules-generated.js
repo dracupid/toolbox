@@ -107,6 +107,7 @@ export default {
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-condition": 0,
   "@typescript-eslint/no-unnecessary-qualifier": "error",
+  "@typescript-eslint/no-unnecessary-template-expression": "error",
   "@typescript-eslint/no-unnecessary-type-arguments": "error",
   "@typescript-eslint/no-unnecessary-type-assertion": "error",
   "@typescript-eslint/no-unnecessary-type-constraint": "error",
@@ -119,7 +120,6 @@ export default {
   "@typescript-eslint/no-unsafe-return": "error",
   "@typescript-eslint/no-unsafe-unary-minus": "error",
   "@typescript-eslint/no-useless-empty-export": "error",
-  "@typescript-eslint/no-useless-template-literals": "error",
   "@typescript-eslint/no-var-requires": 0,
   "@typescript-eslint/non-nullable-type-assertion-style": "error",
   "@typescript-eslint/parameter-properties": 0,
@@ -144,7 +144,6 @@ export default {
   "@typescript-eslint/prefer-regexp-exec": "error",
   "@typescript-eslint/prefer-return-this-type": "error",
   "@typescript-eslint/prefer-string-starts-ends-with": "error",
-  "@typescript-eslint/prefer-ts-expect-error": "error",
   "@typescript-eslint/promise-function-async": "error",
   "@typescript-eslint/require-array-sort-compare": [
     "error",
@@ -160,7 +159,6 @@ export default {
       "allowBoolean": true
     }
   ],
-  "@typescript-eslint/sort-type-constituents": 0,
   "@typescript-eslint/strict-boolean-expressions": 0,
   "@typescript-eslint/switch-exhaustiveness-check": "error",
   "@typescript-eslint/triple-slash-reference": [
