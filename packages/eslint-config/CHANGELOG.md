@@ -1,5 +1,11 @@
 # @jaxonzhao/eslint-config
 
+## 2.1.1
+
+### Patch Changes
+
+- update rules and plugins
+
 ## 2.1.0
 
 ### Minor Changes
