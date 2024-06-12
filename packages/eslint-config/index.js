@@ -9,11 +9,8 @@ import prettier from 'eslint-config-prettier'
 import nPlugin from 'eslint-plugin-n'
 // @ts-ignore
 import unicornPlugin from 'eslint-plugin-unicorn'
-// @ts-ignore
-import importPlugin from 'eslint-plugin-import'
 
 import eslintRules from './rules/eslint-generated.js'
-import importRules from './rules/import.js'
 import nRules from './rules/n.js'
 import unicornRules from './rules/unicorn.js'
 /**
@@ -49,14 +46,12 @@ export default [
       'import/core-modules': ['electron', 'atom'],
     },
     plugins: {
-      import: importPlugin,
       n: nPlugin,
       unicorn: unicornPlugin,
       // WON't use eslint-plugin-promise: prefer to use typescript/typescript-eslint to avoid these problems
     },
     rules: {
       ...eslintRules,
-      ...importRules,
       ...nRules,
       ...unicornRules,
     },

@@ -52,13 +52,7 @@ const result = {
     ),
     extendRulesOptions
   ),
-  // https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
   // https://github.com/xojs/xo/blob/main/lib/options-manager.js
-  ...disableRules('import', [
-    'named',
-    // not needed for ts now
-    'extensions',
-  ]),
   ...disableRules('unicorn', [
     // prefer no-extraneous-class
     'no-static-only-class',

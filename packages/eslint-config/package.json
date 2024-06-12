@@ -19,7 +19,6 @@
   "dependencies": {
     "@jaxonzhao/eslint-utils": "workspace:*",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.29.1",
     "eslint-plugin-n": "17.7.0",
     "eslint-plugin-unicorn": "53.0.0",
     "globals": "^15.3.0"
