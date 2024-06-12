@@ -56,6 +56,7 @@ export const disabledRules = new Set([
   'no-restricted-syntax', // No final decision yet
   'no-shadow', // no strong preference
   'no-ternary', // I prefer using ternary
+  'no-undefined', // It is needed sometimes
   'no-underscore-dangle', // no strong preference
   'no-warning-comments', // no strong preference
   'one-var', // no strong preference

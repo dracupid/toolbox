@@ -30,6 +30,12 @@ export default /** @type {import('eslint').Linter.FlatConfig[]} */ (
       files: tsFiles,
     },
     {
+      files: ['**/*.mts', '**/*.cts', '**/*.ts', '**/*.tsx'],
+      rules: disableRules('n', [
+        'file-extension-in-import', // allow extension in TS
+      ]),
+    },
+    {
       files: ['**/*.cts'],
       rules: disableRules(tsPluginName, [
         'no-require-imports', // disable for commonJS module

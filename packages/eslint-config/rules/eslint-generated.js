@@ -245,7 +245,7 @@ export default {
   "no-ternary": 0,
   "no-throw-literal": "error",
   "no-undef-init": "error",
-  "no-undefined": "error",
+  "no-undefined": 0,
   "no-underscore-dangle": 0,
   "no-unneeded-ternary": "error",
   "no-unused-expressions": [

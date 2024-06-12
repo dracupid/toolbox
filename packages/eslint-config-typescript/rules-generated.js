@@ -269,8 +269,6 @@ export default {
   ],
   "require-await": 0,
   "@typescript-eslint/require-await": "error",
-  "import/named": "off",
-  "import/extensions": "off",
   "unicorn/no-static-only-class": "off",
   "unicorn/no-unnecessary-await": "off",
   "unicorn/prefer-module": "off"
