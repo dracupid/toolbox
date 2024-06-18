@@ -1,1 +1,1 @@
-export { default } from '@jaxonzhao/preset/prettier/index.mjs'
+export { default } from '@jaxonzhao/boot/prettier'

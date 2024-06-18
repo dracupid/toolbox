@@ -21,7 +21,7 @@
     "lint-staged": "15.2.7"
   },
   "dependencies": {
-    "@jaxonzhao/preset": "workspace:*"
+    "@jaxonzhao/boot": "workspace:*"
   },
   "engines": {
     "node": ">=20.11.0"

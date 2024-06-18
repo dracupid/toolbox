@@ -1,13 +1,14 @@
 {
-  "name": "@jaxonzhao/preset",
+  "name": "@jaxonzhao/boot",
   "version": "0.0.1",
-  "description": "My presets for everything",
+  "description": "Something basic for every project.",
+  "exports": {
+    "./eslint": "./eslint.js",
+    "./prettier": "./prettier.js",
+    "./tsconfig": "./tsconfig.common.json"
+  },
   "scripts": {},
-  "keywords": [
-    "preset",
-    "babel",
-    "typescript"
-  ],
+  "keywords": [],
   "type": "module",
   "sideEffects": false,
   "author": "Jingchen Zhao",

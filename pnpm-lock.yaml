@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@jaxonzhao/preset':
+      '@jaxonzhao/boot':
         specifier: workspace:*
-        version: link:packages/preset
+        version: link:packages/boot
     devDependencies:
       '@changesets/cli':
         specifier: 2.27.5
@@ -61,6 +61,24 @@ importers:
       webpack:
         specifier: ^5.92.0
         version: 5.92.0
+
+  packages/boot:
+    dependencies:
+      '@jaxonzhao/eslint-config-typescript':
+        specifier: workspace:*
+        version: link:../eslint-config-typescript
+      '@jaxonzhao/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      prettier:
+        specifier: ^3.3.2
+        version: 3.3.2
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
   packages/eslint-config:
     dependencies:
@@ -122,24 +140,6 @@ importers:
       '@types/eslint':
         specifier: ^8.56.10
         version: 8.56.10
-
-  packages/preset:
-    dependencies:
-      '@jaxonzhao/eslint-config-typescript':
-        specifier: workspace:*
-        version: link:../eslint-config-typescript
-      '@jaxonzhao/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      prettier:
-        specifier: ^3.3.2
-        version: 3.3.2
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
 
   packages/prettier-config:
     dependencies:
