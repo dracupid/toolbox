@@ -13,8 +13,8 @@
     "eslint",
     "rules"
   ],
-  "author": "Jaxon Zhao",
-  "license": "ISC",
+  "author": "Jingchen Zhao",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@jaxonzhao/eslint-utils": "workspace:*",
@@ -22,9 +22,6 @@
     "eslint-plugin-n": "17.8.1",
     "eslint-plugin-unicorn": "53.0.0",
     "globals": "^15.4.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.57.0"
   },
   "peerDependencies": {
     "eslint": "^8.23.0"

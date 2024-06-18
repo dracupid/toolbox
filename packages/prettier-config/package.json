@@ -12,8 +12,8 @@
   "keywords": [
     "prettier"
   ],
-  "author": "Jaxon Zhao",
-  "license": "ISC",
+  "author": "Jingchen Zhao",
+  "license": "MIT",
   "dependencies": {
     "prettier-plugin-organize-imports": "3.2.4"
   },

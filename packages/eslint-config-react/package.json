@@ -11,15 +11,12 @@
     "react",
     "rules"
   ],
-  "author": "Jaxon Zhao",
-  "license": "ISC",
+  "author": "Jingchen Zhao",
+  "license": "MIT",
   "dependencies": {
     "@jaxonzhao/eslint-utils": "workspace:*",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.57.0"
   },
   "peerDependencies": {
     "eslint": "^8.23.0"
