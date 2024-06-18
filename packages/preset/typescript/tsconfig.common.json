@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // Type Checking
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Modules
+    "allowImportingTsExtensions": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+
+    // Emit
+    "noEmit": true,
+
+    // Javascript support
+    "allowJs": true,
+
+    // Editor Support
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    // Backwards Compatibility
+
+    // Language and Environment
+    // "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+
+    // Compiler Diagnostics
+
+    // Projects
+    "composite": true,
+
+    // Output Formatting
+
+    // Completeness
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules/**/*", "dist/**/*"]
+}
