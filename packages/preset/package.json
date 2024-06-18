@@ -16,16 +16,10 @@
     "node": ">=20.11"
   },
   "dependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/plugin-transform-runtime": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/preset-typescript": "^7.24.7",
     "@jaxonzhao/eslint-config-typescript": "workspace:*",
     "@jaxonzhao/prettier-config": "workspace:*"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.24.7",
-    "core-js": "^3",
     "eslint": "^8.57.0",
     "prettier": "^3.3.2",
     "typescript": "^5.4.5"

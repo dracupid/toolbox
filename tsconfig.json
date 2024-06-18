@@ -1,4 +1,4 @@
 {
   "extends": "@jaxonzhao/preset/typescript/tsconfig.common.json",
-  "include": ["**/*.ts"]
+  "include": ["packages/**/*.ts"]
 }

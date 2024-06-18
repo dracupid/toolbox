@@ -13,6 +13,7 @@ export type PresetTypescriptOptions = Partial<{
   rewriteImportExtensions: boolean // false
 }>
 
+// https://babeljs.io/docs/babel-preset-env
 export type PresetEnvOptions = Partial<{
   targets: string | string[] | Record<string, string>
   bugfixes: boolean // false
@@ -31,6 +32,7 @@ export type PresetEnvOptions = Partial<{
   shippedProposals: boolean // false
 }>
 
+// https://babeljs.io/docs/babel-runtime
 export type PluginTransformRuntimeOptions = Partial<{
   absoluteRuntime: boolean | string // false
   corejs: false | 2 | 3 | { version: 2 | 3; proposals: boolean } // false

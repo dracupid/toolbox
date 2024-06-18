@@ -26,14 +26,33 @@ import path from 'node:path'
  * @property {string} importMetaUrl
  */
 
-// pnpm add -D @babel/preset-typescript @babel/preset-env core-js @babel/plugin-transform-runtime @babel/runtime
+export const BabelScope = {
+  JS: 0b1,
+  TS: 0b10,
+  JSX: 0b100,
+  TSX: 0b1000,
+  ALL: 0b1111,
+}
+
+const BabelType = {
+  PRESET: 'preset',
+  PLUGIN: 'plugin',
+}
+
+/**
+ * @template T
+ * @typedef {Object} Component
+ * @property {string} id
+ * @property {string} type
+ * @property {number} scope
+ * @property {T} options
+ */
+
 export class BabelConfig {
   /** @type {NodeRequire} */
   #require
-  /** @type {Preset<any>[]} */
-  #presets = []
-  /** @type {Plugin<any>[]} */
-  #plugins = []
+  /** @type {Component<any>[]} */
+  #components = []
   /** @type {CompileOptions} */
   #options = { usedBy: 'bundler', debug: false, importMetaUrl: import.meta.url }
 
@@ -60,24 +79,34 @@ export class BabelConfig {
   /**
    * @template T
    * @param {string} id
+   * @param {number} scope
    * @param {T} options
    */
-  addPreset(id, options) {
+  addPreset(id, scope, options) {
     /** @type {Preset<T>} */
-    const preset = [id, options]
-    this.#presets.push(preset)
+    this.#components.push({
+      id,
+      type: BabelType.PRESET,
+      scope,
+      options,
+    })
     return this
   }
 
   /**
    * @template T
    * @param {string} id
+   * @param {number} scope
    * @param {T} options
    */
-  addPlugin(id, options) {
+  addPlugin(id, scope, options) {
     /** @type {Plugin<T>} */
-    const plugin = [id, options]
-    this.#plugins.push(plugin)
+    this.#components.push({
+      id,
+      type: BabelType.PLUGIN,
+      scope,
+      options,
+    })
     return this
   }
 
@@ -94,6 +123,8 @@ export class BabelConfig {
     }
     return this.addPreset(
       this.#require.resolve('@babel/preset-typescript'),
+      // eslint-disable-next-line no-bitwise
+      BabelScope.TS | BabelScope.TSX,
       options
     )
   }
@@ -110,7 +141,11 @@ export class BabelConfig {
       corejs: this.getVersion('core-js'),
       ...options,
     }
-    return this.addPreset(this.#require.resolve('@babel/preset-env'), options)
+    return this.addPreset(
+      this.#require.resolve('@babel/preset-env'),
+      BabelScope.ALL,
+      options
+    )
   }
 
   /**
@@ -128,6 +163,7 @@ export class BabelConfig {
     }
     return this.addPlugin(
       this.#require.resolve('@babel/plugin-transform-runtime'),
+      BabelScope.ALL,
       options
     )
   }
@@ -142,12 +178,67 @@ export class BabelConfig {
   }
 
   /** @returns {import('@babel/core').TransformOptions} */
-  build() {
+  build(scope = BabelScope.ALL) {
+    /* eslint-disable no-bitwise */
     return {
       assumptions: this.preferredAssumptions,
-      presets: this.#presets,
-      plugins: this.#plugins,
+      presets: this.#components
+        .filter((c) => c.type === BabelType.PRESET && scope & c.scope)
+        .map((c) => [c.id, c.options]),
+      plugins: this.#components
+        .filter((c) => c.type === BabelType.PLUGIN && scope & c.scope)
+        .map((c) => [c.id, c.options]),
       sourceType: 'unambiguous',
+    }
+  }
+
+  /**
+   * @param {RegExp} test
+   * @returns {import('webpack').RuleSetRule}
+   */
+  toWebpackRule(test = /\.(c|m)?(t|j)sx?$/) {
+    const loadOptions = { cacheDirectory: true }
+    return {
+      test,
+      oneOf: [
+        {
+          // match JS
+          test: /\.(c|m)?js$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          options: {
+            ...loadOptions,
+            ...this.build(BabelScope.JS),
+          },
+        },
+        {
+          // match JSX
+          test: /\.(c|m)?jsx$/,
+          loader: 'babel-loader',
+          options: {
+            ...loadOptions,
+            ...this.build(BabelScope.JSX),
+          },
+        },
+        {
+          // match TS
+          test: /\.(c|m)?ts$/,
+          loader: 'babel-loader',
+          options: {
+            ...loadOptions,
+            ...this.build(BabelScope.TS),
+          },
+        },
+        {
+          // match TSX
+          test: /\.(c|m)?tsx$/,
+          loader: 'babel-loader',
+          options: {
+            ...loadOptions,
+            ...this.build(BabelScope.TSX),
+          },
+        },
+      ],
     }
   }
 }
