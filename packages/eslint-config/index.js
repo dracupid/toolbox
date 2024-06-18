@@ -3,11 +3,8 @@
 import { definePluginRules } from '@jaxonzhao/eslint-utils'
 import globals from 'globals'
 
-// @ts-ignore
 import prettier from 'eslint-config-prettier'
-// @ts-ignore
 import nPlugin from 'eslint-plugin-n'
-// @ts-ignore
 import unicornPlugin from 'eslint-plugin-unicorn'
 
 import eslintRules from './rules/eslint-generated.js'
@@ -33,7 +30,7 @@ export default [
         },
       },
       globals: {
-        ...globals.es2021,
+        ...globals.es2024,
         ...globals.browser,
         ...globals.node,
         ...globals.commonjs,
@@ -47,7 +44,7 @@ export default [
     },
     plugins: {
       n: nPlugin,
-      unicorn: unicornPlugin,
+      unicorn: /** @type {any}*/ (unicornPlugin),
       // WON't use eslint-plugin-promise: prefer to use typescript/typescript-eslint to avoid these problems
     },
     rules: {

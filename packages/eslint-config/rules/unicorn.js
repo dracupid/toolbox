@@ -19,6 +19,7 @@ export default definePluginRules('unicorn', {
   'no-for-loop': 'error',
   'no-instanceof-array': 'error',
   'no-invalid-remove-event-listener': 'error',
+  'no-negation-in-equality-check': 'error',
   'no-object-as-default-parameter': 'error',
   'no-single-promise-in-promise-methods': 'error',
   'no-static-only-class': 'error',

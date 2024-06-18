@@ -17,7 +17,7 @@
   "dependencies": {
     "@jaxonzhao/eslint-config": "workspace:*",
     "@jaxonzhao/eslint-utils": "workspace:*",
-    "typescript-eslint": "7.13.0"
+    "typescript-eslint": "7.13.1"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10"
