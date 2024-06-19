@@ -1,4 +1,7 @@
 {
   "extends": "@jaxonzhao/boot/tsconfig",
-  "include": ["packages/**/*.ts"]
+  "include": ["packages/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "node_modules/.typescript"
+  }
 }

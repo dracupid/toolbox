@@ -1,0 +1,4 @@
+*.bench.ts
+*.test.ts
+*.config.js
+tsconfig.json

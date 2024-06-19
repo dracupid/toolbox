@@ -1,5 +1,5 @@
 //@ts-check
 
-import { useESLintConfig, useTs } from '@jaxonzhao/boot/eslint'
+import { useTs } from '@jaxonzhao/boot/eslint'
 
-export default useESLintConfig(...useTs(import.meta.dirname))
+export default useTs(import.meta.dirname)
