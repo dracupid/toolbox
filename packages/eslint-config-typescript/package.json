@@ -1,6 +1,6 @@
 {
   "name": "@jaxonzhao/eslint-config-typescript",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Custom ESLint rules for typescript.",
   "exports": "./index.js",
   "scripts": {
