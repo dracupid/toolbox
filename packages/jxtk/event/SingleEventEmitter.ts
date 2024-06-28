@@ -4,8 +4,11 @@ export class SingleEventEmitter<T> {
   emit(arg: T): boolean {
     const cbs = this.#$
     for (const cb of cbs) {
-      // TODO: ErrorHandler
-      cb(arg)
+      try {
+        cb(arg)
+      } catch (e) {
+        console.error(`error in single listener`, e)
+      }
     }
     return cbs.size > 0
   }
@@ -17,6 +20,13 @@ export class SingleEventEmitter<T> {
 
   off(cb: (arg: T) => void): void {
     this.#$.delete(cb)
+  }
+
+  onOff(cb: (arg: T) => void) {
+    this.on(cb)
+    return () => {
+      this.off(cb)
+    }
   }
 
   offAll(): void {

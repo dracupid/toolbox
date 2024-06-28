@@ -1,16 +1,35 @@
 type EName = string | symbol
-type ErrorHandler = (
-  e: unknown,
-  name: EName,
-  emitter: EventEmitter<any>
-) => void
+type ErrorInfo = {
+  error: unknown
+  event: EName
+}
+
+const EVT_ERROR = Symbol('error')
 
 export class EventEmitter<T extends Record<EName, any> = Record<EName, any>> {
   readonly #$ = new Map<keyof T, Set<(arg: any) => void>>()
 
-  static #onError: ErrorHandler | undefined
-  static setOnError(handler: ErrorHandler) {
-    EventEmitter.#onError = handler
+  #emitError(event: EName, e: unknown) {
+    const listeners = this.#$.get(EVT_ERROR)
+
+    if (listeners && listeners.size > 0) {
+      for (const cb of listeners) {
+        try {
+          cb({
+            event,
+            error: e,
+          } satisfies ErrorInfo)
+        } catch (e) {
+          console.error('error in error handler', e)
+        }
+      }
+    } else {
+      console.error(`error in [${event.toString()}] event listener`, e)
+    }
+  }
+
+  onError(cb: (errorInfo: ErrorInfo) => void): this {
+    return this.on(EVT_ERROR, cb)
   }
 
   emit<E extends keyof T>(event: E, arg: T[E]): boolean {
@@ -21,15 +40,7 @@ export class EventEmitter<T extends Record<EName, any> = Record<EName, any>> {
         try {
           cb(arg)
         } catch (e) {
-          if (EventEmitter.#onError) {
-            try {
-              EventEmitter.#onError(e, event as EName, this)
-            } catch (e) {
-              console.error(e)
-            }
-          } else {
-            console.error(e)
-          }
+          this.#emitError(event as EName, e)
         }
       }
       return true
