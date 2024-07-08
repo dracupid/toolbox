@@ -198,13 +198,14 @@ export class BabelConfig {
    */
   toWebpackRule(test = /\.(c|m)?(t|j)sx?$/) {
     const loadOptions = { cacheDirectory: true }
+    const babelLoader = this.#require.resolve('babel-loader')
     return {
       test,
       oneOf: [
         {
           // match JS
           test: /\.(c|m)?js$/,
-          loader: 'babel-loader',
+          loader: babelLoader,
           exclude: /node_modules/,
           options: {
             ...loadOptions,
@@ -214,7 +215,7 @@ export class BabelConfig {
         {
           // match JSX
           test: /\.(c|m)?jsx$/,
-          loader: 'babel-loader',
+          loader: babelLoader,
           options: {
             ...loadOptions,
             ...this.build(BabelScope.JSX),
@@ -223,7 +224,7 @@ export class BabelConfig {
         {
           // match TS
           test: /\.(c|m)?ts$/,
-          loader: 'babel-loader',
+          loader: babelLoader,
           options: {
             ...loadOptions,
             ...this.build(BabelScope.TS),
@@ -232,7 +233,7 @@ export class BabelConfig {
         {
           // match TSX
           test: /\.(c|m)?tsx$/,
-          loader: 'babel-loader',
+          loader: babelLoader,
           options: {
             ...loadOptions,
             ...this.build(BabelScope.TSX),
