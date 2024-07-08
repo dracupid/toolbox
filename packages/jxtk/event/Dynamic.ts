@@ -34,3 +34,8 @@ export class Dynamic<T> {
     return val
   }
 }
+
+export type DynamicType<T> = T extends Dynamic<infer P> ? P : never
+export type DynamicObject<T extends Record<string, any>> = {
+  [K in keyof T]: Dynamic<T[K]>
+}
