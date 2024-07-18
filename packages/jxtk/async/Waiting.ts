@@ -1,6 +1,6 @@
 export const enum WaitingState {
   PENDING,
-  FULFULLED,
+  FULFILLED,
   REJECTED,
 }
 
@@ -13,10 +13,17 @@ export class Waiting<T> {
     return this.#value
   }
 
+  unwrap(): T {
+    if (this.isPending) {
+      throw new Error('Waiting value is not ready yet')
+    }
+    return this.#value as T
+  }
+
   onReady(cb: (val: T) => void): void {
     if (typeof cb !== 'function') return
 
-    if (this.#state === WaitingState.FULFULLED) {
+    if (this.#state === WaitingState.FULFILLED) {
       cb(this.#value!)
     } else if (this.#state === WaitingState.PENDING) {
       this.#pending.push(cb)
@@ -29,7 +36,7 @@ export class Waiting<T> {
     }
 
     this.#value = val
-    this.#state = WaitingState.FULFULLED
+    this.#state = WaitingState.FULFILLED
     try {
       this.#pending.forEach((cb) => {
         cb(val)
