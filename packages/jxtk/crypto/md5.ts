@@ -197,8 +197,10 @@ function md51(s: string) {
   const length = s.length
   const tail = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   for (i = 0; i < length; i += 1) {
+    // @ts-expect-error ignore
     tail[i >> 2] |= s.charCodeAt(i) << (i % 4 << 3)
   }
+  // @ts-expect-error ignore
   tail[i >> 2] |= 0x80 << (i % 4 << 3)
   if (i > 55) {
     md5cycle(state, tail)
