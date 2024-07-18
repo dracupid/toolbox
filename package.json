@@ -12,17 +12,17 @@
   "author": "Jingchen Zhao",
   "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "2.27.5",
+    "@changesets/cli": "2.27.7",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/bun": "^1.1.4",
+    "@types/bun": "^1.1.6",
     "@types/eslint": "^8.56.10",
-    "@types/node": "^20.14.5",
+    "@types/node": "^20.14.11",
     "eslint": "^8.57.0",
-    "husky": "9.0.11",
+    "husky": "9.1.0",
     "lint-staged": "15.2.7",
-    "prettier": "^3.3.2",
-    "typescript": "^5.4.5"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "@jaxonzhao/boot": "workspace:*"
@@ -31,5 +31,5 @@
     "node": ">=20.11.0"
   },
   "type": "module",
-  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
+  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5"
 }
