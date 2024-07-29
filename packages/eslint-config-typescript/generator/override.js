@@ -28,6 +28,8 @@ export const disabledRules = new Set([
   'strict-boolean-expressions', // too strict
   'typedef', // Let tsc do this
   'unbound-method', // too annoying
+
+  'no-unnecessary-type-parameters', // ! experimental
 ])
 
 export const deprecatedInESLintBlock = new Set(['no-extra-semi'])
@@ -51,13 +53,18 @@ export const rulesOptions = {
   'consistent-type-imports': {
     fixStyle: 'inline-type-imports',
   },
-  'explicit-member-accessibility': { accessibility: 'no-public' },
+  'explicit-member-accessibility': {
+    accessibility: 'no-public',
+  },
   'no-confusing-void-expression': {
     ignoreArrowShorthand: true,
     ignoreVoidOperator: true,
   },
   'no-empty-interface': {
     allowSingleExtends: true,
+  },
+  'no-empty-object-type': {
+    allowInterfaces: 'with-single-extends',
   },
   'no-extraneous-class': {
     allowWithDecorator: true,

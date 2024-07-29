@@ -17,12 +17,12 @@
     "@commitlint/config-conventional": "19.2.2",
     "@types/bun": "^1.1.6",
     "@types/eslint": "^8.56.10",
-    "@types/node": "^20.14.11",
+    "@types/node": "^22.0.0",
     "eslint": "^8.57.0",
-    "husky": "9.1.0",
+    "husky": "9.1.4",
     "lint-staged": "15.2.7",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "@jaxonzhao/boot": "workspace:*"
@@ -31,5 +31,5 @@
     "node": ">=20.11.0"
   },
   "type": "module",
-  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5"
+  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
 }

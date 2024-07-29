@@ -69,6 +69,12 @@ export default {
       "allowSingleExtends": true
     }
   ],
+  "@typescript-eslint/no-empty-object-type": [
+    "error",
+    {
+      "allowInterfaces": "with-single-extends"
+    }
+  ],
   "@typescript-eslint/no-explicit-any": 0,
   "@typescript-eslint/no-extra-non-null-assertion": "error",
   "@typescript-eslint/no-extraneous-class": [
@@ -106,21 +112,25 @@ export default {
   "@typescript-eslint/no-this-alias": "error",
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-condition": 0,
+  "@typescript-eslint/no-unnecessary-parameter-property-assignment": "error",
   "@typescript-eslint/no-unnecessary-qualifier": "error",
   "@typescript-eslint/no-unnecessary-template-expression": "error",
   "@typescript-eslint/no-unnecessary-type-arguments": "error",
   "@typescript-eslint/no-unnecessary-type-assertion": "error",
   "@typescript-eslint/no-unnecessary-type-constraint": "error",
+  "@typescript-eslint/no-unnecessary-type-parameters": 0,
   "@typescript-eslint/no-unsafe-argument": "error",
   "@typescript-eslint/no-unsafe-assignment": "error",
   "@typescript-eslint/no-unsafe-call": "error",
   "@typescript-eslint/no-unsafe-declaration-merging": "error",
   "@typescript-eslint/no-unsafe-enum-comparison": "error",
+  "@typescript-eslint/no-unsafe-function-type": "error",
   "@typescript-eslint/no-unsafe-member-access": "error",
   "@typescript-eslint/no-unsafe-return": "error",
   "@typescript-eslint/no-unsafe-unary-minus": "error",
   "@typescript-eslint/no-useless-empty-export": "error",
   "@typescript-eslint/no-var-requires": 0,
+  "@typescript-eslint/no-wrapper-object-types": "error",
   "@typescript-eslint/non-nullable-type-assertion-style": "error",
   "@typescript-eslint/parameter-properties": 0,
   "@typescript-eslint/prefer-as-const": "error",

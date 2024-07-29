@@ -15,7 +15,7 @@
   "author": "Jingchen Zhao",
   "license": "MIT",
   "dependencies": {
-    "prettier-plugin-organize-imports": "3.2.4"
+    "prettier-plugin-organize-imports": "4.0.0"
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
