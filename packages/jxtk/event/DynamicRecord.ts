@@ -12,7 +12,7 @@ export type ToPartialDynamic<T> = {
 
 export class DynamicRecord<T extends Record<string | symbol, any>> {
   readonly #v: ToPartialDynamic<T>
-  readonly #proxy: ToStatic<T>
+  readonly #proxy: T
   readonly #$ = new EventEmitter<T>()
   readonly #$any = new SingleEventEmitter<Partial<T>>()
 
@@ -29,7 +29,7 @@ export class DynamicRecord<T extends Record<string | symbol, any>> {
       }
     })
 
-    this.#proxy = new Proxy(this.#v as ToStatic<T>, {
+    this.#proxy = new Proxy(this.#v as T, {
       set: <K extends keyof T>(target: T, key: K, value: T[K]) => {
         if (target[key] === value) return false
         target[key] = value
@@ -42,9 +42,9 @@ export class DynamicRecord<T extends Record<string | symbol, any>> {
         return true
       },
       get(target, key) {
+        /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-return */
         const value = target[key]
         if (value instanceof Dynamic) {
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-return
           return value.get()
         }
         return target[key]
