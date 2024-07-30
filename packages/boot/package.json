@@ -1,6 +1,6 @@
 {
   "name": "@jaxonzhao/boot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Something basic for every project.",
   "exports": {
     "./eslint": "./eslint.js",

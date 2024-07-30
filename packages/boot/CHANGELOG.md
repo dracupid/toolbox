@@ -1,5 +1,17 @@
 # @jaxonzhao/boot
 
+## 0.2.0
+
+### Minor Changes
+
+- update dependencies
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/prettier-config@2.1.0
+  - @jaxonzhao/eslint-config-typescript@2.1.3
+
 ## 0.1.0
 
 ### Minor Changes

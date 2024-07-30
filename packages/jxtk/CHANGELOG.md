@@ -1,5 +1,11 @@
 # jxtk
 
+## 0.1.2
+
+### Patch Changes
+
+- update dependencies
+
 ## 0.1.1
 
 ### Patch Changes
