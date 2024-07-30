@@ -20,6 +20,6 @@
     "node": "^18.18.0 || >=20.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.10"
+    "@types/eslint": "^8.56.11"
   }
 }
