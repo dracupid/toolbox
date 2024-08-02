@@ -17,13 +17,10 @@
   "dependencies": {
     "@jaxonzhao/eslint-config": "workspace:*",
     "@jaxonzhao/eslint-utils": "workspace:*",
-    "typescript-eslint": "7.18.0"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.56.11"
+    "typescript-eslint": "8.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.57.0 || ^9.0.0"
   },
   "engines": {
     "node": "^18.18.0 || >=20.0.0"

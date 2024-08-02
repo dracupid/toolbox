@@ -2,6 +2,8 @@
 
 const { definePluginRules } = require('@jaxonzhao/eslint-utils')
 
+// TODO: update after "eslint-plugin-react": "7.32.2", "eslint-plugin-react-hooks": "4.6.0" are not fully reviewed.
+
 // prefer typescript over the eslint rules, use prettier to handle all layout rules
 module.exports = definePluginRules('react', {
   'hook-use-state': 'error',

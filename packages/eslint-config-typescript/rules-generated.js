@@ -15,7 +15,6 @@ export default {
     }
   ],
   "@typescript-eslint/ban-tslint-comment": "error",
-  "@typescript-eslint/ban-types": "error",
   "@typescript-eslint/class-literal-property-style": 0,
   "@typescript-eslint/consistent-generic-constructors": "error",
   "@typescript-eslint/consistent-indexed-object-style": "error",
@@ -63,12 +62,6 @@ export default {
   "@typescript-eslint/no-duplicate-enum-values": "error",
   "@typescript-eslint/no-duplicate-type-constituents": "error",
   "@typescript-eslint/no-dynamic-delete": "error",
-  "@typescript-eslint/no-empty-interface": [
-    "error",
-    {
-      "allowSingleExtends": true
-    }
-  ],
   "@typescript-eslint/no-empty-object-type": [
     "error",
     {
@@ -109,6 +102,7 @@ export default {
   "@typescript-eslint/no-non-null-assertion": 0,
   "@typescript-eslint/no-redundant-type-constituents": "error",
   "@typescript-eslint/no-require-imports": "error",
+  "@typescript-eslint/no-restricted-types": 0,
   "@typescript-eslint/no-this-alias": "error",
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-condition": 0,
@@ -129,7 +123,6 @@ export default {
   "@typescript-eslint/no-unsafe-return": "error",
   "@typescript-eslint/no-unsafe-unary-minus": "error",
   "@typescript-eslint/no-useless-empty-export": "error",
-  "@typescript-eslint/no-var-requires": 0,
   "@typescript-eslint/no-wrapper-object-types": "error",
   "@typescript-eslint/non-nullable-type-assertion-style": "error",
   "@typescript-eslint/parameter-properties": 0,
@@ -222,13 +215,6 @@ export default {
   "@typescript-eslint/no-restricted-imports": 0,
   "no-shadow": 0,
   "@typescript-eslint/no-shadow": 0,
-  "no-throw-literal": 0,
-  "@typescript-eslint/no-throw-literal": [
-    "error",
-    {
-      "allowThrowingUnknown": true
-    }
-  ],
   "no-unused-expressions": 0,
   "@typescript-eslint/no-unused-expressions": [
     "error",
@@ -246,6 +232,7 @@ export default {
       "vars": "all",
       "args": "after-used",
       "ignoreRestSiblings": true,
+      "ignoreClassWithStaticInitBlock": true,
       "argsIgnorePattern": "^_",
       "destructuredArrayIgnorePattern": "^_",
       "caughtErrors": "all",
@@ -265,7 +252,13 @@ export default {
   ],
   "no-useless-constructor": 0,
   "@typescript-eslint/no-useless-constructor": "error",
-  "@typescript-eslint/only-throw-error": "error",
+  "no-throw-literal": 0,
+  "@typescript-eslint/only-throw-error": [
+    "error",
+    {
+      "allowThrowingUnknown": true
+    }
+  ],
   "prefer-destructuring": 0,
   "@typescript-eslint/prefer-destructuring": 0,
   "prefer-promise-reject-errors": 0,

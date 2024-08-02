@@ -94,6 +94,7 @@ export const rulesOptions = {
     vars: 'all',
     args: 'after-used',
     ignoreRestSiblings: true,
+    ignoreClassWithStaticInitBlock: true,
     argsIgnorePattern: /^_/.source,
     destructuredArrayIgnorePattern: /^_/.source,
     caughtErrors: 'all',

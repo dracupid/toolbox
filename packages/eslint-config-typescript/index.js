@@ -12,9 +12,9 @@ const tsFiles = ['**/*.{ts,tsx,mts,cts}']
  * - https://github.com/xojs/eslint-config-xo-typescript
  */
 
-export default /** @type {import('eslint').Linter.FlatConfig[]} */ (
+export default /** @type {import('eslint').Linter.Config[]} */ (
   tseslint.config(
-    ...eslintConfig,
+    .../** @type {any}*/ (eslintConfig), // TODO: fix type
     {
       files: tsFiles,
       languageOptions: {

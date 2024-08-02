@@ -18,7 +18,7 @@ import unicornRules from './rules/unicorn.js'
  * - https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb v15.0.0
  */
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     languageOptions: {

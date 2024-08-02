@@ -44,7 +44,6 @@ export default {
   "no-loss-of-precision": "error",
   "no-misleading-character-class": "error",
   "no-new-native-nonconstructor": "error",
-  "no-new-symbol": "error",
   "no-obj-calls": "error",
   "no-promise-executor-return": "error",
   "no-prototype-builtins": "error",
@@ -84,6 +83,7 @@ export default {
       "vars": "all",
       "args": "after-used",
       "ignoreRestSiblings": true,
+      "ignoreClassWithStaticInitBlock": true,
       "argsIgnorePattern": "^_",
       "destructuredArrayIgnorePattern": "^_",
       "caughtErrors": "all",
@@ -98,6 +98,7 @@ export default {
       "allowNamedExports": true
     }
   ],
+  "no-useless-assignment": "error",
   "no-useless-backreference": "error",
   "require-atomic-updates": [
     "error",
@@ -172,7 +173,6 @@ export default {
   "max-nested-callbacks": 0,
   "max-params": 0,
   "max-statements": 0,
-  "multiline-comment-style": 0,
   "new-cap": "error",
   "no-alert": "error",
   "no-array-constructor": "error",

@@ -17,14 +17,12 @@ export const disabledRules = new Set([
   'no-explicit-any', // I cannot always avoid using any
   'no-invalid-void-type', // No final decision yet
   'no-non-null-assertion', // too many bad cases
-  'no-type-alias', // type alias is useful
+  'no-restricted-types', // no strong preference
   'no-unnecessary-condition', // force type checking is necessary sometimes
-  'no-var-requires', // enable no-require-imports
   'parameter-properties', // no strong preference
   'prefer-enum-initializers', // it's not a good idea
   'prefer-nullish-coalescing', // No final decision yet
   'prefer-readonly-parameter-types', // too annoying
-  'sort-type-constituents', // no need
   'strict-boolean-expressions', // too strict
   'typedef', // Let tsc do this
   'unbound-method', // too annoying
@@ -59,9 +57,6 @@ export const rulesOptions = {
   'no-confusing-void-expression': {
     ignoreArrowShorthand: true,
     ignoreVoidOperator: true,
-  },
-  'no-empty-interface': {
-    allowSingleExtends: true,
   },
   'no-empty-object-type': {
     allowInterfaces: 'with-single-extends',
@@ -101,7 +96,7 @@ export const rulesOptions = {
  * @type {import('@jaxonzhao/eslint-utils').RuleOptions}
  */
 export const extendRulesOptions = {
-  'no-throw-literal': {
+  'only-throw-error': {
     allowThrowingUnknown: true, // needed for rethrow error
   },
 

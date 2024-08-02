@@ -7,8 +7,8 @@ import {
   generateRules,
   writeRules,
 } from '@jaxonzhao/eslint-utils/build.js'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
 import path from 'path'
+import { plugin as tsPlugin } from 'typescript-eslint'
 import {
   deprecatedInESLintBlock,
   disabledRules,
@@ -16,10 +16,15 @@ import {
   rulesOptions,
 } from './override.js'
 
-const rules = Object.entries(tsPlugin.rules)
+// TODO: fix type
+const rules = Object.entries(
+  /** @type {Record<string, any>} */ (tsPlugin.rules || {})
+)
 
 const tsBaseRules = new Map(
-  rules.filter(([_, rule]) => !rule.meta.docs?.extendsBaseRule)
+  rules.filter(
+    ([_, rule]) => !rule.meta.deprecated && !rule.meta.docs?.extendsBaseRule
+  )
 )
 
 const result = {

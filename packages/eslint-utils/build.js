@@ -4,8 +4,9 @@ import assert from 'node:assert'
 import { writeFile } from 'node:fs/promises'
 
 /**
- * @typedef {import('eslint').Linter.RulesRecord} RulesRecord
- * @typedef {import('eslint').Rule.RuleModule} RuleModule
+ * @import { Linter, Rule } from 'eslint'
+ * @typedef {Linter.RulesRecord} RulesRecord
+ * @typedef {Rule.RuleModule} RuleModule
  */
 
 /**

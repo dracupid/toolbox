@@ -3,7 +3,7 @@
 import tsConfig from '@jaxonzhao/eslint-config-typescript'
 
 /**
- * @typedef {import('eslint').Linter.FlatConfig} ESLintConfig
+ * @typedef {import('eslint').Linter.Config} ESLintConfig
  */
 
 /**
@@ -20,7 +20,7 @@ export function useTs(dirname) {
   return useESLintConfig(...tsConfig, {
     languageOptions: {
       parserOptions: {
-        project: true,
+        projectService: true,
         tsconfigRootDir: dirname,
       },
     },

@@ -21,10 +21,10 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-n": "17.10.1",
     "eslint-plugin-unicorn": "55.0.0",
-    "globals": "^15.8.0"
+    "globals": "^15.9.0"
   },
   "peerDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.57.0 || ^9.0.0"
   },
   "engines": {
     "node": "^18.18.0 || >=20.0.0"
