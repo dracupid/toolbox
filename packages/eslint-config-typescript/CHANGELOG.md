@@ -1,5 +1,17 @@
 # @jaxonzhao/eslint-config-typescript
 
+## 3.0.0
+
+### Major Changes
+
+- ESLint 9 & dep updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/eslint-config@3.0.0
+  - @jaxonzhao/eslint-utils@3.0.0
+
 ## 2.1.3
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @jaxonzhao/boot
 
+## 1.0.0
+
+### Major Changes
+
+- ESLint 9 & dep updates
+
+### Patch Changes
+
+- Updated dependencies
+  - @jaxonzhao/eslint-config-typescript@3.0.0
+
 ## 0.2.0
 
 ### Minor Changes

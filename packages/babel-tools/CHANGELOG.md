@@ -1,5 +1,11 @@
 # @jaxonzhao/babel-tools
 
+## 0.3.0
+
+### Minor Changes
+
+- ESLint 9 & dep updates
+
 ## 0.2.1
 
 ### Patch Changes
