@@ -7,7 +7,7 @@ export const enum WaitingState {
 export class Waiting<T> {
   #value: T | undefined
   #state: WaitingState = WaitingState.PENDING
-  #pending: ((val: T) => void)[] = []
+  readonly #pending = new Set<(val: T) => void>()
 
   getSync() {
     return this.#value
@@ -26,7 +26,7 @@ export class Waiting<T> {
     if (this.#state === WaitingState.FULFILLED) {
       cb(this.#value!)
     } else if (this.#state === WaitingState.PENDING) {
-      this.#pending.push(cb)
+      this.#pending.add(cb)
     }
   }
 
@@ -42,7 +42,22 @@ export class Waiting<T> {
         cb(val)
       })
     } finally {
-      this.#pending = []
+      this.#pending.clear()
+    }
+  }
+
+  replace(val: T) {
+    if (this.#state !== WaitingState.FULFILLED) {
+      throw new Error('Can only replace a fulfilled waiting value')
+    }
+    this.#value = val
+  }
+
+  setOrReplace(val: T) {
+    if (this.isPending) {
+      this.set(val)
+    } else {
+      this.replace(val)
     }
   }
 
@@ -51,7 +66,7 @@ export class Waiting<T> {
       throw new Error('Cannot abort a non-pending waiting value')
     }
     this.#state = WaitingState.REJECTED
-    this.#pending = []
+    this.#pending.clear()
   }
 
   get state() {
