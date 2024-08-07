@@ -1,17 +1,22 @@
 import { SingleEventEmitter } from './SingleEventEmitter'
 
+type EqualFn<T> = (v1: T, v2: T) => boolean
+
 export class Dynamic<T> {
   #v: T
   readonly #$ = new SingleEventEmitter<T>()
+  readonly #isEqual: EqualFn<T> | undefined
 
-  constructor(initValue: T) {
+  constructor(initValue: T, isEqual?: EqualFn<T>) {
     this.#v = initValue
+    this.#isEqual = isEqual
   }
 
   set(v: T) {
-    if (this.#v === v) return
+    if (this.#isEqual ? this.#isEqual(this.#v, v) : this.#v === v) return false
     this.#v = v
     this.#$.emit(v)
+    return true
   }
 
   get(): T {
