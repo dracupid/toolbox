@@ -16,8 +16,8 @@ importers:
         specifier: 2.27.7
         version: 2.27.7
       '@commitlint/cli':
-        specifier: 19.3.0
-        version: 19.3.0(@types/node@22.1.0)(typescript@5.5.4)
+        specifier: 19.4.0
+        version: 19.4.0(@types/node@22.2.0)(typescript@5.5.4)
       '@commitlint/config-conventional':
         specifier: 19.2.2
         version: 19.2.2
@@ -28,8 +28,8 @@ importers:
         specifier: ^9.6.0
         version: 9.6.0
       '@types/node':
-        specifier: ^22.0.3
-        version: 22.1.0
+        specifier: ^22.2.0
+        version: 22.2.0
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
@@ -155,8 +155,8 @@ importers:
         specifier: workspace:*
         version: link:../boot
       bun:
-        specifier: ^1.1.21
-        version: 1.1.21
+        specifier: ^1.1.22
+        version: 1.1.22
       mitata:
         specifier: ^0.1.11
         version: 0.1.11
@@ -845,8 +845,8 @@ packages:
   '@changesets/write@0.3.1':
     resolution: {integrity: sha512-SyGtMXzH3qFqlHKcvFY2eX+6b0NGiFcNav8AFsYwy5l8hejOeoeTDemu5Yjmke2V5jpzY+pBvM0vCCQ3gdZpfw==}
 
-  '@commitlint/cli@19.3.0':
-    resolution: {integrity: sha512-LgYWOwuDR7BSTQ9OLZ12m7F/qhNY+NpAyPBgo4YNMkACE7lGuUnuQq1yi9hz1KA4+3VqpOYl8H1rY/LYK43v7g==}
+  '@commitlint/cli@19.4.0':
+    resolution: {integrity: sha512-sJX4J9UioVwZHq7JWM9tjT5bgWYaIN3rC4FP7YwfEwBYiIO+wMyRttRvQLNkow0vCdM0D67r9NEWU0Ui03I4Eg==}
     engines: {node: '>=v18'}
     hasBin: true
 
@@ -878,8 +878,8 @@ packages:
     resolution: {integrity: sha512-xrzMmz4JqwGyKQKTpFzlN0dx0TAiT7Ran1fqEBgEmEj+PU98crOFtysJgY+QdeSagx6EDRigQIXJVnfrI0ratA==}
     engines: {node: '>=v18'}
 
-  '@commitlint/load@19.2.0':
-    resolution: {integrity: sha512-XvxxLJTKqZojCxaBQ7u92qQLFMMZc4+p9qrIq/9kJDy8DOrEa7P1yx7Tjdc2u2JxIalqT4KOGraVgCE7eCYJyQ==}
+  '@commitlint/load@19.4.0':
+    resolution: {integrity: sha512-I4lCWaEZYQJ1y+Y+gdvbGAx9pYPavqZAZ3/7/8BpWh+QjscAn8AjsUpLV2PycBsEx7gupq5gM4BViV9xwTIJuw==}
     engines: {node: '>=v18'}
 
   '@commitlint/message@19.0.0':
@@ -890,8 +890,8 @@ packages:
     resolution: {integrity: sha512-Il+tNyOb8VDxN3P6XoBBwWJtKKGzHlitEuXA5BP6ir/3loWlsSqDr5aecl6hZcC/spjq4pHqNh0qPlfeWu38QA==}
     engines: {node: '>=v18'}
 
-  '@commitlint/read@19.2.1':
-    resolution: {integrity: sha512-qETc4+PL0EUv7Q36lJbPG+NJiBOGg7SSC7B5BsPWOmei+Dyif80ErfWQ0qXoW9oCh7GTpTNRoaVhiI8RbhuaNw==}
+  '@commitlint/read@19.4.0':
+    resolution: {integrity: sha512-r95jLOEZzKDakXtnQub+zR3xjdnrl2XzerPwm7ch1/cc5JGq04tyaNpa6ty0CRCWdVrk4CZHhqHozb8yZwy2+g==}
     engines: {node: '>=v18'}
 
   '@commitlint/resolve-extends@19.1.0':
@@ -987,43 +987,43 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@oven/bun-darwin-aarch64@1.1.21':
-    resolution: {integrity: sha512-n1hZewJPZg5XcubisWDaKn/wLaldgagAWya3ZuMBuFwsz4PnGTeQ7Wl3aBe7XzW6fNUAd+ZIfvfNYBRNv1R7Rw==}
+  '@oven/bun-darwin-aarch64@1.1.22':
+    resolution: {integrity: sha512-1sNo/mXEWmf/opHyQElIZwUUwamR97d/xreQ3rTypDdqObbWbTH7Y8EhpOwqMeP+WKW/+WgyXAks0dI+guFr8Q==}
     cpu: [arm64]
     os: [darwin]
 
-  '@oven/bun-darwin-x64-baseline@1.1.21':
-    resolution: {integrity: sha512-4MhDFYONGIg2MqO56u6H/X9TD3+hbDQpOjlGdl7J0aUiV47b3k7vLn5hENYEjAIBR3g744E23rIw4FQAXakFMw==}
+  '@oven/bun-darwin-x64-baseline@1.1.22':
+    resolution: {integrity: sha512-r1IOBt7A3NVfM3/PYkfpef3fo1cIdznRzCpE/XwEquYBbMFcvRETWWRUUNK80MFttYaPQuhyHui/b0VLJhoaEw==}
     cpu: [x64]
     os: [darwin]
 
-  '@oven/bun-darwin-x64@1.1.21':
-    resolution: {integrity: sha512-Vr7tz6UBrtkJ0UMCQBRhKH/JThWxkZWnGAmcGFf8h3zFgMfCaTmmWzB4PSCad1wu+4GCrmVoEG8P7MY8+TmS7w==}
+  '@oven/bun-darwin-x64@1.1.22':
+    resolution: {integrity: sha512-keEPJtDlvu/36J+NX1JUh6+u0PiyoRLVGdDNaVU5LsphnYIVL8A4VLAE+xA5FMPlvMyjVua8kYbgUuTTHJJGpg==}
     cpu: [x64]
     os: [darwin]
 
-  '@oven/bun-linux-aarch64@1.1.21':
-    resolution: {integrity: sha512-0avxsNle8QOLsDwo1lqO1o2Mv1bLp3RlVr83XNV2yGVnzCwZmupQcI76fcc2e+Y+YU173xCUasMkiIbguS271g==}
+  '@oven/bun-linux-aarch64@1.1.22':
+    resolution: {integrity: sha512-qL7IVUIaCFzSYae1UhX0rSbG1I1ARH7t3d9EMUxG//nBOqdI5xgEmpFCWPh8Y1mdpPl3bPMT0EvmNx/HjFrUJw==}
     cpu: [arm64]
     os: [linux]
 
-  '@oven/bun-linux-x64-baseline@1.1.21':
-    resolution: {integrity: sha512-HT+PEWa2PY73gBrNuUHrihsGNOBQKp6s6IzAqHUfmDlIyXYaEvRYUZg6vEqyRRSuNcCC6PiQDHWZP99OT2VMZg==}
+  '@oven/bun-linux-x64-baseline@1.1.22':
+    resolution: {integrity: sha512-xTaKbyAxn4jI5CaL13mhkj/wCNphDVHrxMIEfPW4rkVbnY/4Ci2uG9dRrNAXCxwRmyflcp8t2KWmmAUBS95McQ==}
     cpu: [x64]
     os: [linux]
 
-  '@oven/bun-linux-x64@1.1.21':
-    resolution: {integrity: sha512-zmps8oWLE2L+9Cn6oQPbcxIWDIjOT1txbYAv9zlcd84I12DXiB++e/PEE8dPe/3powygCpwZM9b7gZfTv9sx0w==}
+  '@oven/bun-linux-x64@1.1.22':
+    resolution: {integrity: sha512-y4ugmfIg9GlXgZPj2mE5D9g+ou8kwMgSraR4zWvaPPSGDB2nbULGAA9S5DCVEBAuTBxMgh3wXlEgZwQKPmDPuQ==}
     cpu: [x64]
     os: [linux]
 
-  '@oven/bun-windows-x64-baseline@1.1.21':
-    resolution: {integrity: sha512-xwPqSrcdSAJVmCnDlpvEWVHDSf9lmCBIcL5PtM9udrqTJOAVxiyQm0cpXjuv/h6MAZxt7rtt9YqrcK0ixA2xIQ==}
+  '@oven/bun-windows-x64-baseline@1.1.22':
+    resolution: {integrity: sha512-Xdf0ZgonVup+YgFSTaGkzDpgcxojc2whFcaNvV0BJtTsl2MeAwGFl98AziGJSCh0ooG80ipUEIUoxDJBWxaEYw==}
     cpu: [x64]
     os: [win32]
 
-  '@oven/bun-windows-x64@1.1.21':
-    resolution: {integrity: sha512-p9rjwZPiJJtBafJ7MoJvmqyCA4QxVVpM7QaDx6Lhqua7b+i7dsigog8BgeCxGXAMpSKqoBuAuziqnLh0pcdAYQ==}
+  '@oven/bun-windows-x64@1.1.22':
+    resolution: {integrity: sha512-VNgJaK54MnyS4o47JBN0oMh+75kgaHrMt3HWS3Ree1zn2qYyAexeC9m6KPynHGtNFQrxuhHv5ULxJ0Z0pAU7+A==}
     cpu: [x64]
     os: [win32]
 
@@ -1051,8 +1051,8 @@ packages:
   '@types/node@20.12.14':
     resolution: {integrity: sha512-scnD59RpYD91xngrQQLGkE+6UrHUPzeKZWhhjBSa3HSkwjbQc38+q3RoIVEwxQGRw3M+j5hpNAM+lgV3cVormg==}
 
-  '@types/node@22.1.0':
-    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+  '@types/node@22.2.0':
+    resolution: {integrity: sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1341,8 +1341,8 @@ packages:
   bun-types@1.1.17:
     resolution: {integrity: sha512-Z4+OplcSd/YZq7ZsrfD00DKJeCwuNY96a1IDJyR73+cTBaFIS7SC6LhpY/W3AMEXO9iYq5NJ58WAwnwL1p5vKg==}
 
-  bun@1.1.21:
-    resolution: {integrity: sha512-mvqYEvafGskIVTjlftbKvsXtyR6z/SQnhJsVw0xCU46pc56oX1sAGvaemWKOy/sy/gGMHcgLE0KUidDQQzqXWQ==}
+  bun@1.1.22:
+    resolution: {integrity: sha512-G2HCPhzhjDc2jEDkZsO9vwPlpHrTm7a8UVwx9oNS5bZqo5OcSK5GPuWYDWjj7+37bRk5OVLfeIvUMtSrbKeIjQ==}
     cpu: [arm64, x64]
     os: [darwin, linux, win32]
     hasBin: true
@@ -3996,12 +3996,12 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@commitlint/cli@19.3.0(@types/node@22.1.0)(typescript@5.5.4)':
+  '@commitlint/cli@19.4.0(@types/node@22.2.0)(typescript@5.5.4)':
     dependencies:
       '@commitlint/format': 19.3.0
       '@commitlint/lint': 19.2.2
-      '@commitlint/load': 19.2.0(@types/node@22.1.0)(typescript@5.5.4)
-      '@commitlint/read': 19.2.1
+      '@commitlint/load': 19.4.0(@types/node@22.2.0)(typescript@5.5.4)
+      '@commitlint/read': 19.4.0
       '@commitlint/types': 19.0.3
       execa: 8.0.1
       yargs: 17.7.2
@@ -4047,7 +4047,7 @@ snapshots:
       '@commitlint/rules': 19.0.3
       '@commitlint/types': 19.0.3
 
-  '@commitlint/load@19.2.0(@types/node@22.1.0)(typescript@5.5.4)':
+  '@commitlint/load@19.4.0(@types/node@22.2.0)(typescript@5.5.4)':
     dependencies:
       '@commitlint/config-validator': 19.0.3
       '@commitlint/execute-rule': 19.0.0
@@ -4055,7 +4055,7 @@ snapshots:
       '@commitlint/types': 19.0.3
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.5.4)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.1.0)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.2.0)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -4071,7 +4071,7 @@ snapshots:
       conventional-changelog-angular: 7.0.0
       conventional-commits-parser: 5.0.0
 
-  '@commitlint/read@19.2.1':
+  '@commitlint/read@19.4.0':
     dependencies:
       '@commitlint/top-level': 19.0.0
       '@commitlint/types': 19.0.3
@@ -4194,28 +4194,28 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@oven/bun-darwin-aarch64@1.1.21':
+  '@oven/bun-darwin-aarch64@1.1.22':
     optional: true
 
-  '@oven/bun-darwin-x64-baseline@1.1.21':
+  '@oven/bun-darwin-x64-baseline@1.1.22':
     optional: true
 
-  '@oven/bun-darwin-x64@1.1.21':
+  '@oven/bun-darwin-x64@1.1.22':
     optional: true
 
-  '@oven/bun-linux-aarch64@1.1.21':
+  '@oven/bun-linux-aarch64@1.1.22':
     optional: true
 
-  '@oven/bun-linux-x64-baseline@1.1.21':
+  '@oven/bun-linux-x64-baseline@1.1.22':
     optional: true
 
-  '@oven/bun-linux-x64@1.1.21':
+  '@oven/bun-linux-x64@1.1.22':
     optional: true
 
-  '@oven/bun-windows-x64-baseline@1.1.21':
+  '@oven/bun-windows-x64-baseline@1.1.22':
     optional: true
 
-  '@oven/bun-windows-x64@1.1.21':
+  '@oven/bun-windows-x64@1.1.22':
     optional: true
 
   '@types/bun@1.1.6':
@@ -4224,7 +4224,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -4246,7 +4246,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.1.0':
+  '@types/node@22.2.0':
     dependencies:
       undici-types: 6.13.0
 
@@ -4256,7 +4256,7 @@ snapshots:
 
   '@types/ws@8.5.10':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
 
   '@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
@@ -4617,16 +4617,16 @@ snapshots:
       '@types/node': 20.12.14
       '@types/ws': 8.5.10
 
-  bun@1.1.21:
+  bun@1.1.22:
     optionalDependencies:
-      '@oven/bun-darwin-aarch64': 1.1.21
-      '@oven/bun-darwin-x64': 1.1.21
-      '@oven/bun-darwin-x64-baseline': 1.1.21
-      '@oven/bun-linux-aarch64': 1.1.21
-      '@oven/bun-linux-x64': 1.1.21
-      '@oven/bun-linux-x64-baseline': 1.1.21
-      '@oven/bun-windows-x64': 1.1.21
-      '@oven/bun-windows-x64-baseline': 1.1.21
+      '@oven/bun-darwin-aarch64': 1.1.22
+      '@oven/bun-darwin-x64': 1.1.22
+      '@oven/bun-darwin-x64-baseline': 1.1.22
+      '@oven/bun-linux-aarch64': 1.1.22
+      '@oven/bun-linux-x64': 1.1.22
+      '@oven/bun-linux-x64-baseline': 1.1.22
+      '@oven/bun-windows-x64': 1.1.22
+      '@oven/bun-windows-x64-baseline': 1.1.22
 
   call-bind@1.0.7:
     dependencies:
@@ -4730,9 +4730,9 @@ snapshots:
 
   core-js@3.37.1: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@22.1.0)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@22.2.0)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4):
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
       cosmiconfig: 9.0.0(typescript@5.5.4)
       jiti: 1.21.6
       typescript: 5.5.4
@@ -5461,7 +5461,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
