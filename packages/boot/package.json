@@ -5,7 +5,8 @@
   "exports": {
     "./eslint": "./eslint.js",
     "./prettier": "./prettier.js",
-    "./tsconfig": "./tsconfig.common.json"
+    "./tsconfig": "./tsconfig.common.json",
+    "./tsconfig-build": "./tsconfig.build.json"
   },
   "scripts": {},
   "keywords": [],

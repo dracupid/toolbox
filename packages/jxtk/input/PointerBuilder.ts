@@ -1,4 +1,4 @@
-import type { PointerManager } from './PointerManager'
+import type { PointerManager } from './PointerManager.js'
 
 const pointerEvents = [
   'pointerdown',

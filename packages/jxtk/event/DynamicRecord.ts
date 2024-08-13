@@ -1,6 +1,6 @@
-import { Dynamic } from './Dynamic'
-import { EventEmitter } from './EventEmitter'
-import { SingleEventEmitter } from './SingleEventEmitter'
+import { Dynamic } from './Dynamic.js'
+import { EventEmitter } from './EventEmitter.js'
+import { SingleEventEmitter } from './SingleEventEmitter.js'
 
 export type ToStatic<T> = {
   [K in keyof T]: T[K] extends Dynamic<infer P> ? P : never

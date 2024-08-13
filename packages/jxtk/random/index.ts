@@ -1,5 +1,5 @@
-import { assertPositiveInteger } from '../assert'
-import { Charset } from './charset'
+import { assertPositiveInteger } from '../assert/index.js'
+import { Charset } from './charset.js'
 
 export function randomString(
   length: number,

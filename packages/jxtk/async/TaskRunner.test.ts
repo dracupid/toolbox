@@ -1,7 +1,7 @@
 import { test } from 'bun:test'
 import assert from 'node:assert'
-import { sleep } from '.'
-import { TaskRunner } from './TaskRunner'
+import { sleep } from './index.js'
+import { TaskRunner } from './TaskRunner.js'
 
 test('TaskRunner', async () => {
   const runner = new TaskRunner(2)

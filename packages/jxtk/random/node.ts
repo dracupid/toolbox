@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { assertPositiveInteger } from '../assert'
+import { assertPositiveInteger } from '../assert/index.js'
 
 export function randomString(length: number): string {
   assertPositiveInteger('length', length)

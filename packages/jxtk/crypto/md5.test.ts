@@ -1,8 +1,8 @@
 import { test } from 'bun:test'
 import assert from 'node:assert'
-import { randomString } from '../random/node'
-import md5 from './md5'
-import nodeMd5 from './md5-node'
+import { randomString } from '../random/node.js'
+import nodeMd5 from './md5-node.js'
+import md5 from './md5.js'
 
 test('md5', () => {
   for (let i = 1; i <= 100; i++) {

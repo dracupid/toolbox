@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import cluster from 'cluster'
 import { inspect } from 'util'
-import type { LogObject, LogTransformer } from '../types'
+import type { LogObject, LogTransformer } from '../types.js'
 
 function pad2(num: number) {
   return ('' + num).padStart(2, '0')

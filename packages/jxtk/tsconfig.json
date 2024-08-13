@@ -1,0 +1,8 @@
+{
+  "extends": "@jaxonzhao/boot/tsconfig-build",
+  "include": ["**/*.ts"],
+  "exclude": ["js/**/*"],
+  "compilerOptions": {
+    "outDir": "js"
+  }
+}

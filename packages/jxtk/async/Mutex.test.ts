@@ -1,7 +1,7 @@
 import assert from 'assert'
 import { test } from 'bun:test'
-import { sleep } from '.'
-import { Mutex } from './Mutex'
+import { sleep } from './index.js'
+import { Mutex } from './Mutex.js'
 
 test('Mutex', async () => {
   const mutex = new Mutex()

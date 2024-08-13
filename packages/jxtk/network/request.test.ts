@@ -1,6 +1,6 @@
 import { test } from 'bun:test'
-import { assert } from '../assert'
-import request from './request'
+import { assert } from '../assert/index.js'
+import request from './request.js'
 
 test('request:success', async () => {
   const res = await request(

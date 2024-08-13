@@ -2,7 +2,7 @@ import type { IncomingMessage, RequestOptions } from 'node:http'
 import http from 'node:http'
 import https from 'node:https'
 import { types } from 'node:util'
-import { decompressBody } from './body'
+import { decompressBody } from './body.js'
 
 export class Response {
   #bodyString: string | null = null

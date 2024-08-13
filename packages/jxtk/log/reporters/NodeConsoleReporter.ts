@@ -1,5 +1,5 @@
 import { Console } from 'console'
-import { LogLevel, type LogObject, type LogReporter } from '../types'
+import { LogLevel, type LogObject, type LogReporter } from '../types.js'
 
 export default class NodeConsoleReporter implements LogReporter {
   readonly #console: Console

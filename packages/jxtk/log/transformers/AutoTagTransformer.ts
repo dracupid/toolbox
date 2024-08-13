@@ -1,4 +1,4 @@
-import type { LogObject, LogTransformer } from '../types'
+import type { LogObject, LogTransformer } from '../types.js'
 
 function isTag(arg: unknown): arg is string {
   if (typeof arg !== 'string') return false

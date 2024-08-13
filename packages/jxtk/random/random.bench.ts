@@ -1,7 +1,7 @@
 import { bench, run } from 'mitata'
-import { randomString } from './index'
-import { randomString as nodeRandomString } from './node'
-import { randomString as webRandomString } from './web'
+import { randomString } from './index.js'
+import { randomString as nodeRandomString } from './node.js'
+import { randomString as webRandomString } from './web.js'
 
 bench('js', () => {
   randomString(100)

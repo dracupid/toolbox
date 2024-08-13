@@ -2,3 +2,4 @@
 *.test.ts
 *.config.js
 tsconfig.json
+*.tsbuildinfo

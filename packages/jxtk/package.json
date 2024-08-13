@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "eslint --fix --cache --cache-location node_modules/.cache/eslint/ .",
     "format": "prettier --write --cache .",
-    "check": "tsc",
+    "build": "rm -rf js && tsc",
     "test": "bun test",
-    "prepublish": "pnpm run check && pnpm run test"
+    "prepublish": "pnpm run build && pnpm run test"
   },
   "keywords": [
     "tool",

@@ -1,4 +1,4 @@
-import { SingleEventEmitter } from '../event/SingleEventEmitter'
+import { SingleEventEmitter } from '../event/SingleEventEmitter.js'
 
 type PointerID = symbol | number // 浏览器派发的用 number，模拟生成的用 string
 

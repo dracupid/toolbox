@@ -5,7 +5,7 @@ import {
   type LogReporter,
   type LogTransformer,
   type Logger,
-} from './types'
+} from './types.js'
 
 export class JLogger implements Logger {
   #reporters: LogReporter[] = []
@@ -111,4 +111,4 @@ export class JLogger implements Logger {
   }
 }
 
-export { LogLevel, type LogLevelName } from './types'
+export { LogLevel, type LogLevelName } from './types.js'

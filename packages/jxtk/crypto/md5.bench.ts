@@ -1,7 +1,7 @@
 import { bench, run } from 'mitata'
-import { randomString } from '../random/node'
-import md5 from './md5'
-import nodeMd5 from './md5-node'
+import { randomString } from '../random/node.js'
+import nodeMd5 from './md5-node.js'
+import md5 from './md5.js'
 
 const testString = randomString(200)
 
