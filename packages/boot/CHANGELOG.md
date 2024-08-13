@@ -1,5 +1,11 @@
 # @jaxonzhao/boot
 
+## 1.0.1
+
+### Patch Changes
+
+- jxtk compiles to js
+
 ## 1.0.0
 
 ### Major Changes

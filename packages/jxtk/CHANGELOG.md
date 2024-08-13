@@ -1,5 +1,11 @@
 # jxtk
 
+## 0.2.0
+
+### Minor Changes
+
+- jxtk compiles to js
+
 ## 0.1.4
 
 ### Patch Changes
