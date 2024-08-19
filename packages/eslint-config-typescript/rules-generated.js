@@ -73,6 +73,7 @@ export default {
   "@typescript-eslint/no-extraneous-class": [
     "error",
     {
+      "allowEmpty": true,
       "allowWithDecorator": true
     }
   ],

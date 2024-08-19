@@ -62,6 +62,7 @@ export const rulesOptions = {
     allowInterfaces: 'with-single-extends',
   },
   'no-extraneous-class': {
+    allowEmpty: true,
     allowWithDecorator: true,
   },
   'no-floating-promises': {
