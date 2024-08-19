@@ -24,6 +24,7 @@ import path from 'node:path'
  * @property {'bundler' | 'runtime'} usedBy
  * @property {boolean} debug
  * @property {string} importMetaUrl
+ * @property {'development'|'production'} mode
  */
 
 export const BabelScope = {
@@ -54,7 +55,12 @@ export class BabelConfig {
   /** @type {Component<any>[]} */
   #components = []
   /** @type {CompileOptions} */
-  #options = { usedBy: 'bundler', debug: false, importMetaUrl: import.meta.url }
+  #options = {
+    usedBy: 'bundler',
+    debug: false,
+    importMetaUrl: import.meta.url,
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  }
 
   /**
    * @param {Partial<CompileOptions>} [options]
@@ -173,7 +179,7 @@ export class BabelConfig {
       noDocumentAll: true, // document.all is deprecated
       noNewArrows: true, // defaults to true in Babel 7.
       setPublicClassFields: true, // I like it
-      privateFieldsAsSymbols: true, // safe enough and easy to debug
+      privateFieldsAsSymbols: this.#options.mode !== 'production', // safe enough and easy to debug
     }
   }
 
