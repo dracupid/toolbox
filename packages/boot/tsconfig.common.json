@@ -3,7 +3,6 @@
   "compilerOptions": {
     // Type Checking
     "strict": true,
-    "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
 
