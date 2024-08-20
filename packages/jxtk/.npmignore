@@ -1,5 +1,5 @@
-*.bench.ts
-*.test.ts
+*.bench.*
+*.test.*
 *.config.js
 tsconfig.json
 *.tsbuildinfo
