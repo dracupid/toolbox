@@ -1,5 +1,13 @@
 # @jaxonzhao/boot
 
+## 1.0.2
+
+### Patch Changes
+
+- minor fix
+- Updated dependencies
+  - @jaxonzhao/eslint-config-typescript@3.0.1
+
 ## 1.0.1
 
 ### Patch Changes

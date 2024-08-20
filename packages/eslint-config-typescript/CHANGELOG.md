@@ -1,5 +1,11 @@
 # @jaxonzhao/eslint-config-typescript
 
+## 3.0.1
+
+### Patch Changes
+
+- minor fix
+
 ## 3.0.0
 
 ### Major Changes
