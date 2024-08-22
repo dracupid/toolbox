@@ -1,5 +1,11 @@
 # jxtk
 
+## 0.2.2
+
+### Patch Changes
+
+- fix jxtk
+
 ## 0.2.1
 
 ### Patch Changes
