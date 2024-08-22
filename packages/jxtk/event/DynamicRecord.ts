@@ -31,7 +31,7 @@ export class DynamicRecord<T extends Record<string | symbol, any>> {
 
     this.#proxy = new Proxy(this.#v as T, {
       set: <K extends keyof T>(target: T, key: K, value: T[K]) => {
-        if (target[key] === value) return false
+        if (target[key] === value) return true
         target[key] = value
 
         this.#$.emit(key, value)
