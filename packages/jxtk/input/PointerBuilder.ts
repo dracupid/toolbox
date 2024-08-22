@@ -19,7 +19,7 @@ export class PointerBuilder {
     private readonly pointerManager: PointerManager,
     private readonly isValidTarget?: (e: HTMLElement) => boolean
   ) {
-    el.style.touchAction = 'none'
+    // el.style.touchAction = 'none'
 
     pointerEvents.forEach((key) => {
       el.addEventListener(key, this.#feedPointer, { capture: true })
