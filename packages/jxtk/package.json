@@ -1,6 +1,6 @@
 {
   "name": "jxtk",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Jaxon's Typescript Kit",
   "main": "index.js",
   "scripts": {
