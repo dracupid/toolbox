@@ -56,7 +56,7 @@ export class PointerBuilder {
         this.#leftMouseDown = isMouseLeftDown
         if (isMouseLeftDown) {
           pm.addPointer(pointerId, x, y, e)
-        } else if (e.type === 'pointercacel') {
+        } else if (e.type === 'pointercancel') {
           pm.cancelPointer(pointerId, e)
         } else {
           pm.removePointer(pointerId, e)
@@ -75,7 +75,7 @@ export class PointerBuilder {
         }
       } else if (type === 'pointerup') {
         pm.removePointer(pointerId, e)
-      } else if (type === 'pointercacel') {
+      } else if (type === 'pointercancel') {
         pm.cancelPointer(pointerId, e)
       }
     }
