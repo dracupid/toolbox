@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@jaxonzhao/boot": "workspace:*",
-    "bun": "^1.1.24",
+    "bun": "^1.1.25",
     "mitata": "^0.1.11"
   },
   "engines": {
