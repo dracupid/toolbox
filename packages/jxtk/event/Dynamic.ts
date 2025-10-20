@@ -1,4 +1,4 @@
-import { SingleEventEmitter } from './SingleEventEmitter.js'
+import { SingleEventEmitter } from './SingleEventEmitter.ts'
 
 type EqualFn<T> = (v1: T, v2: T) => boolean
 

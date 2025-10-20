@@ -15,14 +15,13 @@
     "@changesets/cli": "2.29.7",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
-    "@types/bun": "^1.1.6",
     "@types/eslint": "^9.6.0",
     "@types/node": "^24.8.1",
     "eslint": "^9.9.0",
     "husky": "9.1.7",
     "lint-staged": "16.2.4",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@jaxonzhao/boot": "workspace:*"

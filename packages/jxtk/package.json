@@ -7,7 +7,7 @@
     "lint": "eslint --fix --cache --cache-location node_modules/.cache/eslint/ .",
     "format": "prettier --write --cache .",
     "build": "rm -rf js && tsc",
-    "test": "bun test",
+    "test": "node --test",
     "prepublish": "pnpm run build && pnpm run test"
   },
   "keywords": [
@@ -21,7 +21,6 @@
   "license": "MIT",
   "devDependencies": {
     "@jaxonzhao/boot": "workspace:*",
-    "bun": "^1.1.25",
     "mitata": "^0.1.11"
   },
   "engines": {

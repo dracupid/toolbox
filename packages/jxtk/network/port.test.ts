@@ -1,11 +1,11 @@
-import { test } from 'bun:test'
-import { assert } from '../assert/index.js'
-import { checkReachability } from './port.js'
+import { test } from 'node:test'
+import { assert } from '../assert/index.ts'
+import { checkReachability } from './port.ts'
 
-test('port:dead', async () => {
+void test('port:dead', async () => {
   assert(!(await checkReachability(4982)))
 })
 
-test('port:alive', async () => {
+void test('port:alive', async () => {
   assert(await checkReachability(80, 'qq.com'))
 })

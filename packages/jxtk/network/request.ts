@@ -1,16 +1,23 @@
-import type { IncomingMessage, RequestOptions } from 'node:http'
+import type {
+  IncomingMessage,
+  RequestOptions as NodeRequestOptions,
+  OutgoingHttpHeaders,
+} from 'node:http'
 import http from 'node:http'
 import https from 'node:https'
 import { types } from 'node:util'
-import { decompressBody } from './body.js'
+import { decompressBody } from './body.ts'
 
 export class Response {
   #bodyString: string | null = null
   #bodyJSON: unknown = null
-  constructor(
-    readonly body: Buffer,
-    readonly response: IncomingMessage
-  ) {}
+  readonly body: Buffer
+  readonly response: IncomingMessage
+
+  constructor(body: Buffer, response: IncomingMessage) {
+    this.body = body
+    this.response = response
+  }
 
   get isJSON() {
     return this.response.headers['content-type']?.includes('application/json')
@@ -29,19 +36,22 @@ export class Response {
   }
 }
 
+type RequestOptions = Exclude<NodeRequestOptions, 'headers'> & {
+  body?: ArrayBuffer | string | Record<string, unknown>
+  headers?: OutgoingHttpHeaders
+}
+
 /* a very simple and stupid http request client */
 export default async function request(
   url: string,
-  options: RequestOptions & {
-    body?: ArrayBuffer | string | Record<string, unknown>
-  } = {}
+  options: RequestOptions = {}
 ): Promise<Response> {
   const reqModule = url.startsWith('https') ? https : http
 
-  const reqOptions = {
-    ...options,
+  const reqOptions: RequestOptions & { headers: OutgoingHttpHeaders } = {
     timeout: 10000,
-    headers: { ...options.headers },
+    ...options,
+    headers: { ...options.headers } satisfies OutgoingHttpHeaders,
   }
 
   let bodyBuffer: Buffer | null = null
@@ -86,7 +96,9 @@ export default async function request(
             (result) => {
               resolve(new Response(result, res))
             },
-            reject
+            (err: unknown) => {
+              reject(err as Error)
+            }
           )
         })
         .on('error', reject)

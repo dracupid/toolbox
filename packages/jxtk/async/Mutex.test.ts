@@ -1,9 +1,9 @@
 import assert from 'assert'
-import { test } from 'bun:test'
-import { sleep } from './index.js'
-import { Mutex } from './Mutex.js'
+import { test } from 'node:test'
+import { sleep } from './index.ts'
+import { Mutex } from './Mutex.ts'
 
-test('Mutex', async () => {
+void test('Mutex', async () => {
   const mutex = new Mutex()
   let i = 0
   await Promise.all([

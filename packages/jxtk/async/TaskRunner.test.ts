@@ -1,9 +1,9 @@
-import { test } from 'bun:test'
 import assert from 'node:assert'
-import { sleep } from './index.js'
-import { TaskRunner } from './TaskRunner.js'
+import { test } from 'node:test'
+import { sleep } from './index.ts'
+import { TaskRunner } from './TaskRunner.ts'
 
-test('TaskRunner', async () => {
+void test('TaskRunner', async () => {
   const runner = new TaskRunner(2)
   let i = 0
   await Promise.all([

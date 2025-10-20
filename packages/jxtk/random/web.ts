@@ -1,5 +1,5 @@
 /* eslint-disable n/no-unsupported-features/node-builtins */
-import { assertPositiveInteger } from '../assert/index.js'
+import { assertPositiveInteger } from '../assert/index.ts'
 
 export function randomString(length: number): string {
   assertPositiveInteger('length', length)
