@@ -12,15 +12,15 @@
   "author": "Jingchen Zhao",
   "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "2.27.7",
-    "@commitlint/cli": "19.4.0",
-    "@commitlint/config-conventional": "19.2.2",
+    "@changesets/cli": "2.29.7",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
     "@types/bun": "^1.1.6",
     "@types/eslint": "^9.6.0",
-    "@types/node": "^22.5.0",
+    "@types/node": "^24.8.1",
     "eslint": "^9.9.0",
-    "husky": "9.1.5",
-    "lint-staged": "15.2.9",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.4",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4"
   },
@@ -28,8 +28,8 @@
     "@jaxonzhao/boot": "workspace:*"
   },
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=22.18.0 <23.0.0 || >=23.6.0 <24.0.0 || >=24.0.0"
   },
   "type": "module",
-  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
+  "packageManager": "pnpm@10.18.3+sha512.bbd16e6d7286fd7e01f6b3c0b3c932cda2965c06a908328f74663f10a9aea51f1129eea615134bf992831b009eabe167ecb7008b597f40ff9bc75946aadfb08d"
 }
