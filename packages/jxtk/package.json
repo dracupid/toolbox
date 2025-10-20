@@ -7,7 +7,7 @@
     "lint": "eslint --fix --cache --cache-location node_modules/.cache/eslint/ .",
     "format": "prettier --write --cache .",
     "build": "rm -rf js && tsc",
-    "test": "node --test",
+    "test": "node --test --experimental-transform-types",
     "prepublish": "pnpm run build && pnpm run test"
   },
   "keywords": [

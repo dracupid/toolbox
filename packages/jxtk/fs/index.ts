@@ -72,7 +72,7 @@ export async function readJSON<T>(
 ): Promise<T> {
   const content = await fsP.readFile(path, options)
   return (
-    content instanceof Buffer
+    Buffer.isBuffer(content)
       ? JSON.parse(content.toString('utf-8'))
       : JSON.parse(content)
   ) as T
@@ -84,7 +84,7 @@ export function readJSONSync<T>(
 ): T {
   const content = fs.readFileSync(path, options)
   return (
-    content instanceof Buffer
+    Buffer.isBuffer(content)
       ? JSON.parse(content.toString('utf-8'))
       : JSON.parse(content)
   ) as T

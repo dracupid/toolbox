@@ -11,13 +11,11 @@ import { decompressBody } from './body.ts'
 export class Response {
   #bodyString: string | null = null
   #bodyJSON: unknown = null
-  readonly body: Buffer
-  readonly response: IncomingMessage
 
-  constructor(body: Buffer, response: IncomingMessage) {
-    this.body = body
-    this.response = response
-  }
+  constructor(
+    readonly body: Buffer,
+    readonly response: IncomingMessage
+  ) {}
 
   get isJSON() {
     return this.response.headers['content-type']?.includes('application/json')
