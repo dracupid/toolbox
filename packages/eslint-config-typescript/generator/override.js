@@ -30,6 +30,13 @@ export const disabledRules = new Set([
   'no-unnecessary-type-parameters', // ! experimental
 ])
 
+// Handled by TypeScript
+export const disabledExtendedRules = new Set([
+  'no-invalid-this',
+  'no-dupe-class-members',
+  'no-redeclare',
+])
+
 export const deprecatedInESLintBlock = new Set(['no-extra-semi'])
 
 // Config rules

@@ -11,14 +11,14 @@ import path from 'path'
 import { plugin as tsPlugin } from 'typescript-eslint'
 import {
   deprecatedInESLintBlock,
+  disabledExtendedRules,
   disabledRules,
   extendRulesOptions,
   rulesOptions,
 } from './override.js'
 
-// TODO: fix type
 const rules = Object.entries(
-  /** @type {Record<string, any>} */ (tsPlugin.rules || {})
+  /** @type {Record<string, any>} */ (/** @type {any} */ (tsPlugin).rules || {})
 )
 
 const tsBaseRules = new Map(
@@ -55,7 +55,8 @@ const result = {
             : [name, name]
         })
     ),
-    extendRulesOptions
+    extendRulesOptions,
+    disabledExtendedRules
   ),
   // https://github.com/xojs/xo/blob/main/lib/options-manager.js
   ...disableRules('unicorn', [

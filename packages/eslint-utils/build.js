@@ -32,13 +32,15 @@ function validateConfigs(allRules, disabledRules, rulesOptions) {
  * @param {RulesRecord} baseRules
  * @param {Record<string, string>} extendMap
  * @param {import('./index').RuleOptions} rulesOptions
+ * @param {Set<String>} disabledExtendedRules
  * @returns {RulesRecord}
  */
 export function defineExtendedPluginRules(
   pluginName,
   baseRules,
   extendMap, // why return-await extends no-return-await with a different name
-  rulesOptions
+  rulesOptions,
+  disabledExtendedRules
 ) {
   Object.keys(rulesOptions).forEach((name) => {
     assert(name in extendMap, `rule ${name} not found in extendMap`)
@@ -50,7 +52,11 @@ export function defineExtendedPluginRules(
       `unknown base rule ${baseName}, extended by ${name}`
     )
     const baseRule = baseRules[baseName]
-    if (baseRule === 0 || baseRule === 'off') {
+    if (
+      baseRule === 0 ||
+      baseRule === 'off' ||
+      disabledExtendedRules.has(baseName)
+    ) {
       // baseRule disabled
       assert(!rulesOptions[name], `rule ${rulesOptions} is disabled in base`)
       rules[baseName] = 0
@@ -66,7 +72,10 @@ export function defineExtendedPluginRules(
             typeof baseRule[baseRule.length - 1] === 'object',
             `maybe invalid rule ${JSON.stringify(baseRule)}`
           )
-          Object.assign(baseRule[baseRule.length - 1], extendOptions)
+          Object.assign(
+            /** @type {object}*/ (baseRule[baseRule.length - 1]),
+            extendOptions
+          )
         } else {
           rules[`${pluginName}/${name}`] = [
             /** @type {any}*/ (baseRule),
