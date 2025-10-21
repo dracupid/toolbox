@@ -66,6 +66,7 @@ export const disabledRules = new Set([
   'prefer-named-capture-group', // no strong preference
   'prefer-object-has-own', // need ES2022
   'prefer-template', // harmless
+  'preserve-caught-error', // no strong preference
   'require-unicode-regexp', // No final decision yet
   'sort-imports', // handled by prettier-plugin-organize-imports
   'sort-keys', // no strong preference

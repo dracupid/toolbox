@@ -4,7 +4,7 @@
   "description": "Jaxon's Typescript Kit",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix --cache --cache-location node_modules/.cache/eslint/ .",
+    "lint": "eslint --fix --concurrency=auto --cache --cache-location node_modules/.cache/eslint/ .",
     "format": "prettier --write --cache .",
     "build": "rm -rf js && tsc",
     "test": "node --test --experimental-transform-types",

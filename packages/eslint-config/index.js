@@ -1,6 +1,7 @@
 // @ts-check
 
 import { definePluginRules } from '@jaxonzhao/eslint-utils'
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 
 import prettier from 'eslint-config-prettier'
@@ -18,8 +19,7 @@ import unicornRules from './rules/unicorn.js'
  * - https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb v15.0.0
  */
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -38,6 +38,7 @@ export default [
     },
     linterOptions: {
       reportUnusedDisableDirectives: true,
+      reportUnusedInlineConfigs: 'error',
     },
     settings: {
       'import/core-modules': ['electron', 'atom'],
@@ -61,4 +62,4 @@ export default [
       'prefer-module': 'off',
     }),
   },
-]
+])

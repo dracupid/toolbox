@@ -14,6 +14,7 @@ export const disabledRules = new Set([
   'member-ordering', // No final decision yet
   'method-signature-style', // no strong preference
   'naming-convention', // No final decision yet
+  'no-deprecated', // No final decision yet
   'no-explicit-any', // I cannot always avoid using any
   'no-invalid-void-type', // No final decision yet
   'no-non-null-assertion', // too many bad cases
@@ -24,7 +25,6 @@ export const disabledRules = new Set([
   'prefer-nullish-coalescing', // No final decision yet
   'prefer-readonly-parameter-types', // too annoying
   'strict-boolean-expressions', // too strict
-  'typedef', // Let tsc do this
   'unbound-method', // too annoying
 
   'no-unnecessary-type-parameters', // ! experimental
@@ -44,6 +44,7 @@ export const rulesOptions = {
   'consistent-type-assertions': {
     assertionStyle: 'as',
     objectLiteralTypeAssertions: 'allow-as-parameter',
+    arrayLiteralTypeAssertions: 'allow-as-parameter',
   },
   'consistent-type-exports': {
     fixMixedExportsWithInlineTypeSpecifier: true,
@@ -98,7 +99,8 @@ export const rulesOptions = {
  */
 export const extendRulesOptions = {
   'only-throw-error': {
-    allowThrowingUnknown: true, // needed for rethrow error
+    // allowThrowingUnknown: true, // needed for rethrow error
+    allowRethrowing: true,
   },
 
   'no-use-before-define': {

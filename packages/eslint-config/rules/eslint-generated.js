@@ -58,6 +58,7 @@ export default {
   "no-sparse-arrays": "error",
   "no-template-curly-in-string": "error",
   "no-this-before-super": "error",
+  "no-unassigned-vars": "error",
   "no-undef": "error",
   "no-unexpected-multiline": "error",
   "no-unmodified-loop-condition": "error",
@@ -322,6 +323,7 @@ export default {
   "prefer-rest-params": "error",
   "prefer-spread": "error",
   "prefer-template": 0,
+  "preserve-caught-error": 0,
   "radix": [
     "error",
     "as-needed"

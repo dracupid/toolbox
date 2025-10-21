@@ -22,7 +22,8 @@ export default {
     "error",
     {
       "assertionStyle": "as",
-      "objectLiteralTypeAssertions": "allow-as-parameter"
+      "objectLiteralTypeAssertions": "allow-as-parameter",
+      "arrayLiteralTypeAssertions": "allow-as-parameter"
     }
   ],
   "@typescript-eslint/consistent-type-definitions": 0,
@@ -59,6 +60,7 @@ export default {
       "ignoreVoidOperator": true
     }
   ],
+  "@typescript-eslint/no-deprecated": 0,
   "@typescript-eslint/no-duplicate-enum-values": "error",
   "@typescript-eslint/no-duplicate-type-constituents": "error",
   "@typescript-eslint/no-dynamic-delete": "error",
@@ -96,6 +98,7 @@ export default {
       "checksVoidReturn": false
     }
   ],
+  "@typescript-eslint/no-misused-spread": "error",
   "@typescript-eslint/no-mixed-enums": "error",
   "@typescript-eslint/no-namespace": "error",
   "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
@@ -113,6 +116,7 @@ export default {
   "@typescript-eslint/no-unnecessary-type-arguments": "error",
   "@typescript-eslint/no-unnecessary-type-assertion": "error",
   "@typescript-eslint/no-unnecessary-type-constraint": "error",
+  "@typescript-eslint/no-unnecessary-type-conversion": "error",
   "@typescript-eslint/no-unnecessary-type-parameters": 0,
   "@typescript-eslint/no-unsafe-argument": "error",
   "@typescript-eslint/no-unsafe-assignment": "error",
@@ -122,6 +126,7 @@ export default {
   "@typescript-eslint/no-unsafe-function-type": "error",
   "@typescript-eslint/no-unsafe-member-access": "error",
   "@typescript-eslint/no-unsafe-return": "error",
+  "@typescript-eslint/no-unsafe-type-assertion": "error",
   "@typescript-eslint/no-unsafe-unary-minus": "error",
   "@typescript-eslint/no-useless-empty-export": "error",
   "@typescript-eslint/no-wrapper-object-types": "error",
@@ -149,6 +154,7 @@ export default {
   "@typescript-eslint/prefer-return-this-type": "error",
   "@typescript-eslint/prefer-string-starts-ends-with": "error",
   "@typescript-eslint/promise-function-async": "error",
+  "@typescript-eslint/related-getter-setter-pairs": "error",
   "@typescript-eslint/require-array-sort-compare": [
     "error",
     {
@@ -163,6 +169,7 @@ export default {
       "allowBoolean": true
     }
   ],
+  "@typescript-eslint/return-await": "error",
   "@typescript-eslint/strict-boolean-expressions": 0,
   "@typescript-eslint/switch-exhaustiveness-check": "error",
   "@typescript-eslint/triple-slash-reference": [
@@ -173,7 +180,6 @@ export default {
       "lib": "never"
     }
   ],
-  "@typescript-eslint/typedef": 0,
   "@typescript-eslint/unbound-method": 0,
   "@typescript-eslint/unified-signatures": [
     "error",
@@ -257,7 +263,7 @@ export default {
   "@typescript-eslint/only-throw-error": [
     "error",
     {
-      "allowThrowingUnknown": true
+      "allowRethrowing": true
     }
   ],
   "prefer-destructuring": 0,

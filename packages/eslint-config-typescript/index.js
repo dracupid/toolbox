@@ -1,6 +1,7 @@
 // @ts-check
 import eslintConfig from '@jaxonzhao/eslint-config'
 import { disableRules } from '@jaxonzhao/eslint-utils'
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 import customTSRules from './rules-generated.js'
 
@@ -12,42 +13,40 @@ const tsFiles = ['**/*.{ts,tsx,mts,cts}']
  * - https://github.com/xojs/eslint-config-xo-typescript
  */
 
-export default /** @type {import('eslint').Linter.Config[]} */ (
-  tseslint.config(
-    .../** @type {any}*/ (eslintConfig), // TODO: fix type
-    {
-      files: tsFiles,
-      languageOptions: {
-        parser: tseslint.parser,
-      },
-      plugins: { [tsPluginName]: tseslint.plugin },
-      rules: customTSRules,
+export default defineConfig(
+  ...eslintConfig,
+  {
+    files: tsFiles,
+    languageOptions: {
+      parser: tseslint.parser,
     },
-    {
-      // disable unnecessary eslint-rules
-      // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended-raw.ts
-      ...tseslint.configs.eslintRecommended,
-      files: tsFiles,
-    },
-    {
-      files: ['**/*.mts', '**/*.cts', '**/*.ts', '**/*.tsx'],
-      rules: disableRules('n', [
-        'file-extension-in-import', // allow extension in TS
+    plugins: { [tsPluginName]: tseslint.plugin },
+    rules: customTSRules,
+  },
+  {
+    // disable unnecessary eslint-rules
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended-raw.ts
+    ...tseslint.configs.eslintRecommended,
+    files: tsFiles,
+  },
+  {
+    files: ['**/*.mts', '**/*.cts', '**/*.ts', '**/*.tsx'],
+    rules: disableRules('n', [
+      'file-extension-in-import', // allow extension in TS
+    ]),
+  },
+  {
+    files: ['**/*.cts'],
+    rules: disableRules(tsPluginName, [
+      'no-require-imports', // disable for commonJS module
+    ]),
+  },
+  {
+    files: ['**/*.d.ts', '**/*.d.mts', '**/*.d.cts'],
+    rules: {
+      ...disableRules(tsPluginName, [
+        'triple-slash-reference', // allow using in .d.ts
       ]),
     },
-    {
-      files: ['**/*.cts'],
-      rules: disableRules(tsPluginName, [
-        'no-require-imports', // disable for commonJS module
-      ]),
-    },
-    {
-      files: ['**/*.d.ts', '**/*.d.mts', '**/*.d.cts'],
-      rules: {
-        ...disableRules(tsPluginName, [
-          'triple-slash-reference', // allow using in .d.ts
-        ]),
-      },
-    }
-  )
+  }
 )
