@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "publish": "pnpm publish -r --access=public --registry=https://registry.npmjs.org/"
+    "publish": "pnpm publish -r --access=public --registry=https://registry.npmjs.org/",
+    "format": "prettier --cache --write .",
+    "lint": "eslint --concurrency=auto"
   },
   "private": true,
   "keywords": [],

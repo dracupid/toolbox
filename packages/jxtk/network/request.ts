@@ -34,7 +34,7 @@ export class Response {
   }
 }
 
-type RequestOptions = Exclude<NodeRequestOptions, 'headers'> & {
+type RequestOptions = Omit<NodeRequestOptions, 'headers'> & {
   body?: ArrayBuffer | string | Record<string, unknown>
   headers?: OutgoingHttpHeaders
 }
@@ -45,7 +45,6 @@ export default async function request(
   options: RequestOptions = {}
 ): Promise<Response> {
   const reqModule = url.startsWith('https') ? https : http
-
   const reqOptions: RequestOptions & { headers: OutgoingHttpHeaders } = {
     timeout: 10000,
     ...options,

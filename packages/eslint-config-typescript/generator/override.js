@@ -20,6 +20,7 @@ export const disabledRules = new Set([
   'no-non-null-assertion', // too many bad cases
   'no-restricted-types', // no strong preference
   'no-unnecessary-condition', // force type checking is necessary sometimes
+  'no-unsafe-type-assertion', // assertion means unsafe already
   'parameter-properties', // no strong preference
   'prefer-enum-initializers', // it's not a good idea
   'prefer-nullish-coalescing', // No final decision yet

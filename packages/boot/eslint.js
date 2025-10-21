@@ -1,28 +1,36 @@
 //@ts-check
 
 import tsConfig from '@jaxonzhao/eslint-config-typescript'
+import { defineConfig } from 'eslint/config'
+import { existsSync, readFileSync } from 'fs'
+import path from 'path'
 
-/**
- * @typedef {import('eslint').Linter.Config} ESLintConfig
- */
-
-/**
- * @param  {ESLintConfig[]} args
- */
-export function useESLintConfig(...args) {
-  return args
-}
+const PRETTIER_IGNORE = '.prettierignore'
 
 /**
  * @param {string} dirname
+ * @param {Parameters<typeof defineConfig>} configs
  */
-export function useTs(dirname) {
-  return useESLintConfig(...tsConfig, {
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: dirname,
+export function useTs(dirname, ...configs) {
+  const prettierIgnore = path.join(dirname, PRETTIER_IGNORE)
+  /** @type {string[]} */
+  let ignores = []
+  if (existsSync(prettierIgnore)) {
+    const content = readFileSync(prettierIgnore, 'utf8').trim().split('\n')
+    ignores = content
+  }
+
+  return defineConfig(
+    ...tsConfig,
+    {
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: dirname,
+        },
       },
     },
-  })
+    { ignores },
+    ...configs
+  )
 }

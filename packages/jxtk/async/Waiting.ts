@@ -17,7 +17,7 @@ export class Waiting<T> {
     if (this.pending) {
       throw new Error('Waiting value is not ready yet')
     }
-    return this.#value as T
+    return this.#value! as T
   }
 
   onReady(cb: (val: T) => void): void {

@@ -34,7 +34,7 @@ const result = {
         '@typescript-eslint',
         generateRules(tsBaseRules, disabledRules, rulesOptions)
       )
-    ).sort((a, b) => a[0].localeCompare(b[0]))
+    ).toSorted((a, b) => a[0].localeCompare(b[0]))
   ),
   ...defineExtendedPluginRules(
     '@typescript-eslint',
