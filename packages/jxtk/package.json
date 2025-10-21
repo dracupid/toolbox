@@ -21,13 +21,14 @@
   "license": "MIT",
   "devDependencies": {
     "@jaxonzhao/boot": "workspace:*",
-    "mitata": "^0.1.11"
+    "@mitata/counters": "^0.0.8",
+    "mitata": "^1.0.34"
   },
   "engines": {
     "node": ">=20.11"
   },
   "sideEffects": false,
   "dependencies": {
-    "chalk": "^5.3.0"
+    "chalk": "^5.6.2"
   }
 }
