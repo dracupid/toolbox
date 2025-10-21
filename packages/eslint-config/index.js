@@ -4,7 +4,7 @@ import { definePluginRules } from '@jaxonzhao/eslint-utils'
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 
-import prettier from 'eslint-config-prettier'
+import prettier from 'eslint-config-prettier/flat'
 import nPlugin from 'eslint-plugin-n'
 import unicornPlugin from 'eslint-plugin-unicorn'
 

@@ -20,9 +20,9 @@
     "typescript-eslint": "8.46.1"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0 || ^9.0.0"
+    "eslint": ">=9.37.0"
   },
   "engines": {
-    "node": "^18.18.0 || >=20.0.0"
+    "node": "^20.10.0 || >=21.0.0"
   }
 }
